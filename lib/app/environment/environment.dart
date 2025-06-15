@@ -28,4 +28,7 @@ class Environment {
 
     if (_type == EnvironmentType.dev) {}
   }
+
+  static Environment get instance => _instance;
+  static EnvironmentType get enviromentType => _type;
 }
