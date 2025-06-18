@@ -19,14 +19,16 @@ body:
     validations:
       required: true
 
-  - type: date
+  - type: input
     attributes:
       label: "🗓️ 배포 예정일 (선택)"
       description: "배포를 계획하는 날짜를 입력해주세요."
+      placeholder: "2025-04-01"
+    validations:
+      pattern: "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
 
   - type: textarea
     attributes:
       label: "🙋🏻 참고 자료 (선택)"
       description: "배포 가이드 문서나 관련 링크가 있다면 첨부해주세요."
-      placeholder: ""
-
+      placeholder: "https://…"
