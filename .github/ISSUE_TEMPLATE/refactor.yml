@@ -21,8 +21,10 @@ body:
         - label: "변수명 정리"
         - label: "테스트 커버리지 추가"
 
-  - type: date
+  - type: input
     attributes:
       label: "⏳ 예상 완료일 (선택)"
-      description: "리팩토링 완료를 예상하는 날짜를 입력해주세요."
-
+      description: "리팩토링 완료 예상 일자를 입력해주세요."
+      placeholder: "2025-03-07"
+    validations:
+      pattern: "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
