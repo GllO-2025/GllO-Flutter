@@ -23,15 +23,17 @@ body:
     attributes:
       label: "📸 스크린샷 (선택)"
       description: "오류 화면이 있다면 첨부해주세요."
-      placeholder: "이미지 URL 또는 간단 설명"
+      placeholder: "https://…"
 
   - type: textarea
     attributes:
       label: "🔎 추가 정보 (선택)"
       description: "OS 버전, 환경 설정 등 기타 참고할 정보가 있다면 입력해주세요."
-      placeholder: ""
+      placeholder: "iOS 17.4, 기기: iPhone 14"
 
-  - type: date
+  - type: input
     attributes:
       label: "⏳ 예상 완료일 (선택)"
       description: "이슈 해결 예상 일자를 입력해주세요."
+      placeholder: "2025-06-18"
+      format: date
