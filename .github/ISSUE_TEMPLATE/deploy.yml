@@ -1,0 +1,32 @@
+name: "🚀 Deploy"
+description: "배포 관련 작업 템플릿"
+labels:
+  - deploy
+body:
+  - type: textarea
+    attributes:
+      label: "📄 배포 설명"
+      description: "이번 배포의 목적과 개요를 작성해주세요."
+      placeholder: "예) v1.2.0 스테이징 환경 배포"
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: "✅ 작업할 내용"
+      description: "배포 전후로 수행할 작업을 체크박스 형태로 나열해주세요."
+      placeholder: "- [ ] CI 빌드 확인\n- [ ] 마이그레이션 적용\n- [ ] 모니터링 알람 설정"
+    validations:
+      required: true
+
+  - type: date
+    attributes:
+      label: "🗓️ 배포 예정일 (선택)"
+      description: "배포를 계획하는 날짜를 입력해주세요."
+
+  - type: textarea
+    attributes:
+      label: "🙋🏻 참고 자료 (선택)"
+      description: "배포 가이드 문서나 관련 링크가 있다면 첨부해주세요."
+      placeholder: ""
+
