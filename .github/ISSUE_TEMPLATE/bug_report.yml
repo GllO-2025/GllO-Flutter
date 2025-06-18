@@ -31,3 +31,7 @@ body:
       description: "OS 버전, 환경 설정 등 기타 참고할 정보가 있다면 입력해주세요."
       placeholder: ""
 
+  - type: date
+    attributes:
+      label: "⏳ 예상 완료일 (선택)"
+      description: "이슈 해결 예상 일자를 입력해주세요."
