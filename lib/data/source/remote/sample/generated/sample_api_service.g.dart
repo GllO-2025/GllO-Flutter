@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of '../sample_remote_data_source.dart';
+part of '../sample_api_service.dart';
 
 // **************************************************************************
 // RetrofitGenerator
@@ -8,8 +8,8 @@ part of '../sample_remote_data_source.dart';
 
 // ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element,unnecessary_string_interpolations
 
-class _SampleRemoteDataSource implements SampleRemoteDataSource {
-  _SampleRemoteDataSource(this._dio, {this.baseUrl, this.errorLogger});
+class _SampleApiService implements SampleApiService {
+  _SampleApiService(this._dio, {this.baseUrl, this.errorLogger});
 
   final Dio _dio;
 
@@ -101,25 +101,23 @@ class _SampleRemoteDataSource implements SampleRemoteDataSource {
 // RiverpodGenerator
 // **************************************************************************
 
-String _$sampleRemoteDataSourceHash() =>
-    r'eae3e9c1edd4c48eaf50e260259abfb6d94b1275';
+String _$sampleApiServiceHash() => r'697cffb27f687ee010670840556b010f3ba3bbb3';
 
-/// See also [sampleRemoteDataSource].
-@ProviderFor(sampleRemoteDataSource)
-final sampleRemoteDataSourceProvider =
-    Provider<SampleRemoteDataSource>.internal(
-      sampleRemoteDataSource,
-      name: r'sampleRemoteDataSourceProvider',
-      debugGetCreateSourceHash:
-          const bool.fromEnvironment('dart.vm.product')
-              ? null
-              : _$sampleRemoteDataSourceHash,
-      dependencies: null,
-      allTransitiveDependencies: null,
-    );
+/// See also [sampleApiService].
+@ProviderFor(sampleApiService)
+final sampleApiServiceProvider = Provider<SampleApiService>.internal(
+  sampleApiService,
+  name: r'sampleApiServiceProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product')
+          ? null
+          : _$sampleApiServiceHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
 
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
-typedef SampleRemoteDataSourceRef = ProviderRef<SampleRemoteDataSource>;
+typedef SampleApiServiceRef = ProviderRef<SampleApiService>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
