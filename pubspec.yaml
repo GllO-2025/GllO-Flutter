@@ -93,6 +93,12 @@ flutter:
     - asset/animation/
     - asset/font/
     - asset/icon/
+    - asset/icon/arrow/
+    - asset/icon/etc/
+    - asset/icon/info/
+    - asset/icon/media/
+    - asset/icon/quick_action/
+    - asset/icon/system/
     - asset/png/
     - asset/translation/
 
