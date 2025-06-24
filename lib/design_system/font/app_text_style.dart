@@ -4,7 +4,7 @@ abstract class AppTextStyle {
   /// Pretendard
   static const pretendard = 'Pretendard';
 
-  static const titleL  = TextStyle(
+  static const titleL = TextStyle(
     fontFamily: pretendard,
     fontSize: 24,
     fontWeight: FontWeight.w600,
@@ -12,7 +12,7 @@ abstract class AppTextStyle {
     letterSpacing: -0.72,
   );
 
-  static const titleM  = TextStyle(
+  static const titleM = TextStyle(
     fontFamily: pretendard,
     fontSize: 20,
     fontWeight: FontWeight.w600,
@@ -20,7 +20,7 @@ abstract class AppTextStyle {
     letterSpacing: -0.60,
   );
 
-  static const titleS  = TextStyle(
+  static const titleS = TextStyle(
     fontFamily: pretendard,
     fontSize: 18,
     fontWeight: FontWeight.w600,
@@ -36,7 +36,7 @@ abstract class AppTextStyle {
     letterSpacing: -0.32,
   );
 
-  static const textLr  = TextStyle(
+  static const textLr = TextStyle(
     fontFamily: pretendard,
     fontSize: 16,
     fontWeight: FontWeight.w400,
@@ -52,7 +52,7 @@ abstract class AppTextStyle {
     letterSpacing: -0.28,
   );
 
-  static const textMm  = TextStyle(
+  static const textMm = TextStyle(
     fontFamily: pretendard,
     fontSize: 14,
     fontWeight: FontWeight.w500,
@@ -60,7 +60,7 @@ abstract class AppTextStyle {
     letterSpacing: -0.28,
   );
 
-  static const textMr  = TextStyle(
+  static const textMr = TextStyle(
     fontFamily: pretendard,
     fontSize: 14,
     fontWeight: FontWeight.w400,
@@ -68,7 +68,7 @@ abstract class AppTextStyle {
     letterSpacing: -0.28,
   );
 
-  static const textSm  = TextStyle(
+  static const textSm = TextStyle(
     fontFamily: pretendard,
     fontSize: 12,
     fontWeight: FontWeight.w500,
@@ -76,7 +76,7 @@ abstract class AppTextStyle {
     letterSpacing: -0.24,
   );
 
-  static const textSr  = TextStyle(
+  static const textSr = TextStyle(
     fontFamily: pretendard,
     fontSize: 12,
     fontWeight: FontWeight.w400,
