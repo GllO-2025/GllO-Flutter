@@ -35,21 +35,38 @@ class $AssetFontGen {
 class $AssetIconGen {
   const $AssetIconGen();
 
-  /// File path: asset/icon/icon.svg
-  SvgGenImage get icon => const SvgGenImage('asset/icon/icon.svg');
+  /// Directory path: asset/icon/arrow
+  $AssetIconArrowGen get arrow => const $AssetIconArrowGen();
 
-  /// List of all assets
-  List<SvgGenImage> get values => [icon];
+  /// Directory path: asset/icon/etc
+  $AssetIconEtcGen get etc => const $AssetIconEtcGen();
+
+  /// Directory path: asset/icon/info
+  $AssetIconInfoGen get info => const $AssetIconInfoGen();
+
+  /// Directory path: asset/icon/media
+  $AssetIconMediaGen get media => const $AssetIconMediaGen();
+
+  /// Directory path: asset/icon/quick_action
+  $AssetIconQuickActionGen get quickAction => const $AssetIconQuickActionGen();
+
+  /// Directory path: asset/icon/system
+  $AssetIconSystemGen get system => const $AssetIconSystemGen();
 }
 
 class $AssetPngGen {
   const $AssetPngGen();
 
-  /// File path: asset/png/image.png
-  AssetGenImage get image => const AssetGenImage('asset/png/image.png');
+  /// File path: asset/png/konkuk_logo.png
+  AssetGenImage get konkukLogo =>
+      const AssetGenImage('asset/png/konkuk_logo.png');
+
+  /// File path: asset/png/sookmyung_logo.png
+  AssetGenImage get sookmyungLogo =>
+      const AssetGenImage('asset/png/sookmyung_logo.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [image];
+  List<AssetGenImage> get values => [konkukLogo, sookmyungLogo];
 }
 
 class $AssetTranslationGen {
@@ -60,6 +77,200 @@ class $AssetTranslationGen {
 
   /// List of all assets
   List<String> get values => [translation];
+}
+
+class $AssetIconArrowGen {
+  const $AssetIconArrowGen();
+
+  /// File path: asset/icon/arrow/down_line.svg
+  SvgGenImage get downLine =>
+      const SvgGenImage('asset/icon/arrow/down_line.svg');
+
+  /// File path: asset/icon/arrow/down_small_line.svg
+  SvgGenImage get downSmallLine =>
+      const SvgGenImage('asset/icon/arrow/down_small_line.svg');
+
+  /// File path: asset/icon/arrow/left_line.svg
+  SvgGenImage get leftLine =>
+      const SvgGenImage('asset/icon/arrow/left_line.svg');
+
+  /// File path: asset/icon/arrow/left_small_line.svg
+  SvgGenImage get leftSmallLine =>
+      const SvgGenImage('asset/icon/arrow/left_small_line.svg');
+
+  /// File path: asset/icon/arrow/right_line.svg
+  SvgGenImage get rightLine =>
+      const SvgGenImage('asset/icon/arrow/right_line.svg');
+
+  /// File path: asset/icon/arrow/right_small_line.svg
+  SvgGenImage get rightSmallLine =>
+      const SvgGenImage('asset/icon/arrow/right_small_line.svg');
+
+  /// File path: asset/icon/arrow/up_line.svg
+  SvgGenImage get upLine => const SvgGenImage('asset/icon/arrow/up_line.svg');
+
+  /// File path: asset/icon/arrow/up_small_line.svg
+  SvgGenImage get upSmallLine =>
+      const SvgGenImage('asset/icon/arrow/up_small_line.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [
+    downLine,
+    downSmallLine,
+    leftLine,
+    leftSmallLine,
+    rightLine,
+    rightSmallLine,
+    upLine,
+    upSmallLine,
+  ];
+}
+
+class $AssetIconEtcGen {
+  const $AssetIconEtcGen();
+
+  /// File path: asset/icon/etc/check_circle_fill.svg
+  SvgGenImage get checkCircleFill =>
+      const SvgGenImage('asset/icon/etc/check_circle_fill.svg');
+
+  /// File path: asset/icon/etc/check_circle_line.svg
+  SvgGenImage get checkCircleLine =>
+      const SvgGenImage('asset/icon/etc/check_circle_line.svg');
+
+  /// File path: asset/icon/etc/radio_circle_selected.svg
+  SvgGenImage get radioCircleSelected =>
+      const SvgGenImage('asset/icon/etc/radio_circle_selected.svg');
+
+  /// File path: asset/icon/etc/radio_circle_unselected.svg
+  SvgGenImage get radioCircleUnselected =>
+      const SvgGenImage('asset/icon/etc/radio_circle_unselected.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [
+    checkCircleFill,
+    checkCircleLine,
+    radioCircleSelected,
+    radioCircleUnselected,
+  ];
+}
+
+class $AssetIconInfoGen {
+  const $AssetIconInfoGen();
+
+  /// File path: asset/icon/info/earth_line.svg
+  SvgGenImage get earthLine =>
+      const SvgGenImage('asset/icon/info/earth_line.svg');
+
+  /// File path: asset/icon/info/location_fill.svg
+  SvgGenImage get locationFill =>
+      const SvgGenImage('asset/icon/info/location_fill.svg');
+
+  /// File path: asset/icon/info/phone_fill.svg
+  SvgGenImage get phoneFill =>
+      const SvgGenImage('asset/icon/info/phone_fill.svg');
+
+  /// File path: asset/icon/info/time_fill.svg
+  SvgGenImage get timeFill =>
+      const SvgGenImage('asset/icon/info/time_fill.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [
+    earthLine,
+    locationFill,
+    phoneFill,
+    timeFill,
+  ];
+}
+
+class $AssetIconMediaGen {
+  const $AssetIconMediaGen();
+
+  /// File path: asset/icon/media/camera_2_fill.svg
+  SvgGenImage get camera2Fill =>
+      const SvgGenImage('asset/icon/media/camera_2_fill.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [camera2Fill];
+}
+
+class $AssetIconQuickActionGen {
+  const $AssetIconQuickActionGen();
+
+  /// File path: asset/icon/quick_action/add2.svg
+  SvgGenImage get add2 => const SvgGenImage('asset/icon/quick_action/add2.svg');
+
+  /// File path: asset/icon/quick_action/bookmark_add_line.svg
+  SvgGenImage get bookmarkAddLine =>
+      const SvgGenImage('asset/icon/quick_action/bookmark_add_line.svg');
+
+  /// File path: asset/icon/quick_action/bookmark_fill.svg
+  SvgGenImage get bookmarkFill =>
+      const SvgGenImage('asset/icon/quick_action/bookmark_fill.svg');
+
+  /// File path: asset/icon/quick_action/transfer_line.svg
+  SvgGenImage get transferLine =>
+      const SvgGenImage('asset/icon/quick_action/transfer_line.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [
+    add2,
+    bookmarkAddLine,
+    bookmarkFill,
+    transferLine,
+  ];
+}
+
+class $AssetIconSystemGen {
+  const $AssetIconSystemGen();
+
+  /// File path: asset/icon/system/bell_line2.svg
+  SvgGenImage get bellLine2 =>
+      const SvgGenImage('asset/icon/system/bell_line2.svg');
+
+  /// File path: asset/icon/system/close_line.svg
+  SvgGenImage get closeLine =>
+      const SvgGenImage('asset/icon/system/close_line.svg');
+
+  /// File path: asset/icon/system/eye_2_line.svg
+  SvgGenImage get eye2Line =>
+      const SvgGenImage('asset/icon/system/eye_2_line.svg');
+
+  /// File path: asset/icon/system/eye_close_line.svg
+  SvgGenImage get eyeCloseLine =>
+      const SvgGenImage('asset/icon/system/eye_close_line.svg');
+
+  /// File path: asset/icon/system/information_line.svg
+  SvgGenImage get informationLine =>
+      const SvgGenImage('asset/icon/system/information_line.svg');
+
+  /// File path: asset/icon/system/menu_line.svg
+  SvgGenImage get menuLine =>
+      const SvgGenImage('asset/icon/system/menu_line.svg');
+
+  /// File path: asset/icon/system/more_1_fill.svg
+  SvgGenImage get more1Fill =>
+      const SvgGenImage('asset/icon/system/more_1_fill.svg');
+
+  /// File path: asset/icon/system/notification_line.svg
+  SvgGenImage get notificationLine =>
+      const SvgGenImage('asset/icon/system/notification_line.svg');
+
+  /// File path: asset/icon/system/search_line.svg
+  SvgGenImage get searchLine =>
+      const SvgGenImage('asset/icon/system/search_line.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [
+    bellLine2,
+    closeLine,
+    eye2Line,
+    eyeCloseLine,
+    informationLine,
+    menuLine,
+    more1Fill,
+    notificationLine,
+    searchLine,
+  ];
 }
 
 class Assets {

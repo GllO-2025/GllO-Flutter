@@ -7,7 +7,7 @@ part of '../sample_remote_data_source_impl.dart';
 // **************************************************************************
 
 String _$sampleRemoteDataSourceHash() =>
-    r'834f163a2fea5ccf86217b97614c6ea48b17f4a0';
+    r'57dd2286e9598ce47d3bcb84a3c7ab7db6bf5b5a';
 
 /// See also [sampleRemoteDataSource].
 @ProviderFor(sampleRemoteDataSource)
