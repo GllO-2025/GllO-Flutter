@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:gllo_flutter/app/asset/assets.gen.dart';
+import 'package:gllo_flutter/app/router/routes.dart';
 import 'package:gllo_flutter/design_system/font/app_text_style.dart';
 import 'package:gllo_flutter/design_system/foundation/color/app_color.dart';
 import 'package:gllo_flutter/design_system/foundation/size/app_layout.dart';
+import 'package:go_router/go_router.dart';
 
 /// Navigation Bar
 /// https://www.figma.com/design/i2Rdv9uaE5bQ1TTasEKoNN/GllO-%EC%9E%91%EC%97%85-%EB%AC%B8%EC%84%9C-v1.0?node-id=1321-23181&m=dev
 
 enum AppNavigationBarItem {
-  home(label: 'Home'), // Home
-  map(label: 'Map'), // Map
-  collect(label: 'Collect'), // Collect
-  user(label: 'User'); // User
+  home(label: 'Home'), // 홈
+  map(label: 'Map'), // 맵(지도)
+  collect(label: 'Collect'), // 컬렉션
+  user(label: 'User'); // 유저
 
   const AppNavigationBarItem({required this.label});
 
@@ -21,7 +23,7 @@ enum AppNavigationBarItem {
 class AppNavigationBar extends StatelessWidget {
   const AppNavigationBar({required this.currentItem, super.key});
 
-  final AppNavigationBarItem currentItem;
+  final AppNavigationBarItem currentItem; // 현재 선택된 아이템
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +50,9 @@ class AppNavigationBar extends StatelessWidget {
             selectedIcon: Assets.icon.etc.home3Fill,
             unselectedIcon: Assets.icon.etc.home3Line,
             label: AppNavigationBarItem.home.label,
-            onTap: () {},
+            onTap: () {
+              context.goNamed(Routes.home.name);
+            },
             selected: currentItem == AppNavigationBarItem.home,
           ),
           const SizedBox(width: 8),
@@ -56,17 +60,25 @@ class AppNavigationBar extends StatelessWidget {
             selectedIcon: Assets.icon.etc.mapFill,
             unselectedIcon: Assets.icon.etc.mapLine,
             label: AppNavigationBarItem.map.label,
-            onTap: () {},
+            onTap: () {
+              context.goNamed(Routes.map.name);
+            },
             selected: currentItem == AppNavigationBarItem.map,
           ),
           const SizedBox(width: 8),
-          _CenterActionButton(onTap: () {}),
+          _CenterActionButton(
+            onTap: () {
+              //TODO: 추후 Action 추가 필요
+            },
+          ),
           const SizedBox(width: 8),
           _NavBarItem(
             selectedIcon: Assets.icon.etc.box2Fill,
             unselectedIcon: Assets.icon.etc.box2Line,
             label: AppNavigationBarItem.collect.label,
-            onTap: () {},
+            onTap: () {
+              context.goNamed(Routes.collect.name);
+            },
             selected: currentItem == AppNavigationBarItem.collect,
           ),
           const SizedBox(width: 8),
@@ -74,7 +86,9 @@ class AppNavigationBar extends StatelessWidget {
             selectedIcon: Assets.icon.etc.user2Fill,
             unselectedIcon: Assets.icon.etc.user2Line,
             label: AppNavigationBarItem.user.label,
-            onTap: () {},
+            onTap: () {
+              context.goNamed(Routes.user.name);
+            },
             selected: currentItem == AppNavigationBarItem.user,
           ),
           const SizedBox(width: 8),
