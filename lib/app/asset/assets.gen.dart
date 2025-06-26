@@ -129,28 +129,76 @@ class $AssetIconArrowGen {
 class $AssetIconEtcGen {
   const $AssetIconEtcGen();
 
-  /// File path: asset/icon/etc/check_circle_fill.svg
-  SvgGenImage get checkCircleFill =>
-      const SvgGenImage('asset/icon/etc/check_circle_fill.svg');
+  /// File path: asset/icon/etc/box_2_fill.svg
+  SvgGenImage get box2Fill =>
+      const SvgGenImage('asset/icon/etc/box_2_fill.svg');
 
-  /// File path: asset/icon/etc/check_circle_line.svg
-  SvgGenImage get checkCircleLine =>
-      const SvgGenImage('asset/icon/etc/check_circle_line.svg');
+  /// File path: asset/icon/etc/box_2_line.svg
+  SvgGenImage get box2Line =>
+      const SvgGenImage('asset/icon/etc/box_2_line.svg');
 
-  /// File path: asset/icon/etc/radio_circle_selected.svg
-  SvgGenImage get radioCircleSelected =>
-      const SvgGenImage('asset/icon/etc/radio_circle_selected.svg');
+  /// File path: asset/icon/etc/check_box_selected.svg
+  SvgGenImage get checkBoxSelected =>
+      const SvgGenImage('asset/icon/etc/check_box_selected.svg');
 
-  /// File path: asset/icon/etc/radio_circle_unselected.svg
-  SvgGenImage get radioCircleUnselected =>
-      const SvgGenImage('asset/icon/etc/radio_circle_unselected.svg');
+  /// File path: asset/icon/etc/check_box_unselected.svg
+  SvgGenImage get checkBoxUnselected =>
+      const SvgGenImage('asset/icon/etc/check_box_unselected.svg');
+
+  /// File path: asset/icon/etc/heart_fill.svg
+  SvgGenImage get heartFill =>
+      const SvgGenImage('asset/icon/etc/heart_fill.svg');
+
+  /// File path: asset/icon/etc/heart_line.svg
+  SvgGenImage get heartLine =>
+      const SvgGenImage('asset/icon/etc/heart_line.svg');
+
+  /// File path: asset/icon/etc/home_3_fill.svg
+  SvgGenImage get home3Fill =>
+      const SvgGenImage('asset/icon/etc/home_3_fill.svg');
+
+  /// File path: asset/icon/etc/home_3_line.svg
+  SvgGenImage get home3Line =>
+      const SvgGenImage('asset/icon/etc/home_3_line.svg');
+
+  /// File path: asset/icon/etc/map_fill.svg
+  SvgGenImage get mapFill => const SvgGenImage('asset/icon/etc/map_fill.svg');
+
+  /// File path: asset/icon/etc/map_line.svg
+  SvgGenImage get mapLine => const SvgGenImage('asset/icon/etc/map_line.svg');
+
+  /// File path: asset/icon/etc/radio_selected.svg
+  SvgGenImage get radioSelected =>
+      const SvgGenImage('asset/icon/etc/radio_selected.svg');
+
+  /// File path: asset/icon/etc/radio_unselected.svg
+  SvgGenImage get radioUnselected =>
+      const SvgGenImage('asset/icon/etc/radio_unselected.svg');
+
+  /// File path: asset/icon/etc/user_2_fill.svg
+  SvgGenImage get user2Fill =>
+      const SvgGenImage('asset/icon/etc/user_2_fill.svg');
+
+  /// File path: asset/icon/etc/user_2_line.svg
+  SvgGenImage get user2Line =>
+      const SvgGenImage('asset/icon/etc/user_2_line.svg');
 
   /// List of all assets
   List<SvgGenImage> get values => [
-    checkCircleFill,
-    checkCircleLine,
-    radioCircleSelected,
-    radioCircleUnselected,
+    box2Fill,
+    box2Line,
+    checkBoxSelected,
+    checkBoxUnselected,
+    heartFill,
+    heartLine,
+    home3Fill,
+    home3Line,
+    mapFill,
+    mapLine,
+    radioSelected,
+    radioUnselected,
+    user2Fill,
+    user2Line,
   ];
 }
 
