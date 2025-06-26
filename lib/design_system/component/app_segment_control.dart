@@ -5,13 +5,20 @@ import 'package:gllo_flutter/design_system/foundation/size/app_layout.dart';
 
 /// Segment Controll
 /// https://www.figma.com/design/i2Rdv9uaE5bQ1TTasEKoNN/GllO-%EC%9E%91%EC%97%85-%EB%AC%B8%EC%84%9C-v1.0?node-id=1399-26258&m=dev
+
+// Segment Item
+class SegmentItem {
+  const SegmentItem({required this.text});
+  final String text;
+}
+
 class AppSegmentControl extends StatelessWidget {
   const AppSegmentControl({
-    required this.tabs,
+    required this.items,
     required this.controller,
     super.key,
   });
-  final List<Tab> tabs;
+  final List<SegmentItem> items;
   final TabController controller;
 
   @override
@@ -24,11 +31,12 @@ class AppSegmentControl extends StatelessWidget {
       padding: const EdgeInsets.all(AppLayout.marginPaddingXxs),
       child: TabBar(
         controller: controller,
-        tabs: tabs,
+        tabs: items.map((e) => Tab(text: e.text, height: 48)).toList(),
         indicator: BoxDecoration(
           borderRadius: BorderRadius.circular(AppLayout.radius200),
           color: AppScaleColor.white100,
         ),
+        indicatorWeight: 0,
         indicatorSize: TabBarIndicatorSize.tab,
         indicatorColor: Colors.transparent,
         dividerColor: Colors.transparent,
