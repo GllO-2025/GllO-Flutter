@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gllo_flutter/design_system/component/app_navigation_bar.dart';
+import 'package:gllo_flutter/presentation/widget/app_scaffold.dart';
 
 /// 홈
 class HomeView extends StatelessWidget {
@@ -7,10 +8,8 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: AppNavigationBar(
-        currentItem: AppNavigationBarItem.home,
-      ),
+    return AppScaffold(
+      item: AppNavigationBarItem.home,
       body: const Center(child: Text('Home View')),
     );
   }
