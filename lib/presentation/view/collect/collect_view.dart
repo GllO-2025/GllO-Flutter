@@ -7,11 +7,11 @@ class CollectView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       bottomNavigationBar: AppNavigationBar(
         currentItem: AppNavigationBarItem.collect,
       ),
-      body: Center(child: Text('Collect View')),
+      body: const Center(child: Text('Collect View')),
     );
   }
 }

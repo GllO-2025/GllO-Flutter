@@ -10,21 +10,56 @@ import 'package:go_router/go_router.dart';
 /// Navigation Bar
 /// https://www.figma.com/design/i2Rdv9uaE5bQ1TTasEKoNN/GllO-%EC%9E%91%EC%97%85-%EB%AC%B8%EC%84%9C-v1.0?node-id=1321-23181&m=dev
 
-enum AppNavigationBarItem {
-  home(label: 'Home'), // 홈
-  map(label: 'Map'), // 맵(지도)
-  collect(label: 'Collect'), // 컬렉션
-  user(label: 'User'); // 유저
+class AppNavigationBarType {
+  const AppNavigationBarType({
+    required this.label,
+    required this.routeName,
+    required this.selectedIcon,
+    required this.unselectedIcon,
+  });
 
-  const AppNavigationBarItem({required this.label});
+  final String label; // 이름
+  final String routeName; // 라우팅 경로 (절대경로)
+  final SvgGenImage selectedIcon;
+  final SvgGenImage unselectedIcon;
+}
 
-  final String label;
+/// Navigation Bar의 item 관리
+abstract final class AppNavigationBarItem {
+  AppNavigationBarItem._();
+  static AppNavigationBarType home = AppNavigationBarType(
+    label: 'Home',
+    routeName: Routes.home.name,
+    selectedIcon: Assets.icon.etc.home3Fill,
+    unselectedIcon: Assets.icon.etc.home3Line,
+  );
+
+  static AppNavigationBarType map = AppNavigationBarType(
+    label: 'Map',
+    routeName: Routes.map.name,
+    selectedIcon: Assets.icon.etc.mapFill,
+    unselectedIcon: Assets.icon.etc.mapLine,
+  );
+
+  static AppNavigationBarType collect = AppNavigationBarType(
+    label: 'Collect',
+    routeName: Routes.collect.name,
+    selectedIcon: Assets.icon.etc.box2Fill,
+    unselectedIcon: Assets.icon.etc.box2Line,
+  );
+
+  static AppNavigationBarType user = AppNavigationBarType(
+    label: 'User',
+    routeName: Routes.user.name,
+    selectedIcon: Assets.icon.etc.user2Fill,
+    unselectedIcon: Assets.icon.etc.user2Line,
+  );
 }
 
 class AppNavigationBar extends StatelessWidget {
   const AppNavigationBar({required this.currentItem, super.key});
 
-  final AppNavigationBarItem currentItem; // 현재 선택된 아이템
+  final AppNavigationBarType currentItem; // 현재 선택된 아이템
 
   @override
   Widget build(BuildContext context) {
@@ -49,9 +84,7 @@ class AppNavigationBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           _NavBarItem(
-            selectedIcon: Assets.icon.etc.home3Fill,
-            unselectedIcon: Assets.icon.etc.home3Line,
-            label: AppNavigationBarItem.home.label,
+            item: AppNavigationBarItem.home,
             onTap: () {
               context.goNamed(Routes.home.name);
             },
@@ -59,9 +92,7 @@ class AppNavigationBar extends StatelessWidget {
           ),
           const SizedBox(width: 8),
           _NavBarItem(
-            selectedIcon: Assets.icon.etc.mapFill,
-            unselectedIcon: Assets.icon.etc.mapLine,
-            label: AppNavigationBarItem.map.label,
+            item: AppNavigationBarItem.map,
             onTap: () {
               context.goNamed(Routes.map.name);
             },
@@ -75,9 +106,7 @@ class AppNavigationBar extends StatelessWidget {
           ),
           const SizedBox(width: 8),
           _NavBarItem(
-            selectedIcon: Assets.icon.etc.box2Fill,
-            unselectedIcon: Assets.icon.etc.box2Line,
-            label: AppNavigationBarItem.collect.label,
+            item: AppNavigationBarItem.collect,
             onTap: () {
               context.goNamed(Routes.collect.name);
             },
@@ -85,9 +114,7 @@ class AppNavigationBar extends StatelessWidget {
           ),
           const SizedBox(width: 8),
           _NavBarItem(
-            selectedIcon: Assets.icon.etc.user2Fill,
-            unselectedIcon: Assets.icon.etc.user2Line,
-            label: AppNavigationBarItem.user.label,
+            item: AppNavigationBarItem.user,
             onTap: () {
               context.goNamed(Routes.user.name);
             },
@@ -103,20 +130,19 @@ class AppNavigationBar extends StatelessWidget {
 /// Navigation Bar Item Widget
 class _NavBarItem extends StatelessWidget {
   const _NavBarItem({
-    required this.selectedIcon,
-    required this.unselectedIcon,
-    required this.label,
+    required this.item,
     required this.onTap,
     required this.selected,
   });
-  final SvgGenImage selectedIcon;
-  final SvgGenImage unselectedIcon;
-  final String label;
+  final AppNavigationBarType item;
   final VoidCallback onTap;
   final bool selected;
 
   @override
   Widget build(BuildContext context) {
+    final icon = selected ? item.selectedIcon : item.unselectedIcon;
+    final color = selected ? AppScaleColor.gray800 : AppScaleColor.gray500;
+
     return GestureDetector(
       onTap: onTap,
       behavior: HitTestBehavior.translucent,
@@ -127,25 +153,10 @@ class _NavBarItem extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              selected
-                  ? selectedIcon.svg(
-                    colorFilter: const ColorFilter.mode(
-                      AppScaleColor.gray800,
-                      BlendMode.srcIn,
-                    ),
-                  )
-                  : unselectedIcon.svg(
-                    colorFilter: const ColorFilter.mode(
-                      AppScaleColor.gray500,
-                      BlendMode.srcIn,
-                    ),
-                  ),
+              icon.svg(colorFilter: ColorFilter.mode(color, BlendMode.srcIn)),
               Text(
-                label,
-                style: AppTextStyle.textSr.copyWith(
-                  color:
-                      selected ? AppScaleColor.gray800 : AppScaleColor.gray500,
-                ),
+                item.label,
+                style: AppTextStyle.textSr.copyWith(color: color),
               ),
             ],
           ),

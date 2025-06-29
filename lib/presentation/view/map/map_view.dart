@@ -7,11 +7,11 @@ class MapView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       bottomNavigationBar: AppNavigationBar(
         currentItem: AppNavigationBarItem.map,
       ),
-      body: Center(child: Text('Map View')),
+      body: const Center(child: Text('Map View')),
     );
   }
 }

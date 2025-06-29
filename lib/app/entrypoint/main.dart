@@ -16,6 +16,7 @@ void main() async {
   /// 특정 SVG Asset Preload
   await SvgUtil.preloadSVGs(
     assetPaths: [
+      Assets.icon.etc.home3Line.path,
       Assets.icon.etc.home3Fill.path,
       Assets.icon.etc.mapFill.path,
       Assets.icon.etc.box2Fill.path,
