@@ -4,6 +4,7 @@ import 'package:gllo_flutter/design_system/foundation/font/app_text_style.dart';
 import 'package:gllo_flutter/design_system/foundation/size/app_layout.dart';
 
 /// Action Sheet
+/// [showAppActionSheet]를 이용
 /// https://www.figma.com/design/i2Rdv9uaE5bQ1TTasEKoNN/GllO-%EC%9E%91%EC%97%85-%EB%AC%B8%EC%84%9C-v1.0?node-id=1399-27551&m=dev
 class AppActionSheet extends StatelessWidget {
   const AppActionSheet({
@@ -24,7 +25,6 @@ class AppActionSheet extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 32),
             child: Container(
-              clipBehavior: Clip.hardEdge,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(AppLayout.radius600),
                 color: AppScaleColor.white100,
