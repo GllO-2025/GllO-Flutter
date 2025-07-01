@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gllo_flutter/app/router/routes.dart';
+import 'package:gllo_flutter/presentation/view/collect/collect_view.dart';
+import 'package:gllo_flutter/presentation/view/home/home_view.dart';
+import 'package:gllo_flutter/presentation/view/map/map_view.dart';
 import 'package:gllo_flutter/presentation/view/sample/sample_view.dart';
+import 'package:gllo_flutter/presentation/view/user/user_view.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
@@ -19,13 +23,45 @@ class AppRouter {
       GlobalKey<NavigatorState>();
 
   late final GoRouter routerConfig = GoRouter(
-    initialLocation: Routes.sample.name,
+    initialLocation: Routes.home.name,
     routes: [
       /// 샘플 화면
       GoRoute(
         path: Routes.sample.path,
         name: Routes.sample.name,
         builder: (context, state) => const SampleView(),
+      ),
+
+      /// 홈
+      GoRoute(
+        path: Routes.home.path,
+        name: Routes.home.name,
+        pageBuilder:
+            (context, state) => const NoTransitionPage(child: HomeView()),
+      ),
+
+      /// 맵
+      GoRoute(
+        path: Routes.map.path,
+        name: Routes.map.name,
+        pageBuilder:
+            (context, state) => const NoTransitionPage(child: MapView()),
+      ),
+
+      /// 컬렉션
+      GoRoute(
+        path: Routes.collect.path,
+        name: Routes.collect.name,
+        pageBuilder:
+            (context, state) => const NoTransitionPage(child: CollectView()),
+      ),
+
+      /// 유저
+      GoRoute(
+        path: Routes.user.path,
+        name: Routes.user.name,
+        pageBuilder:
+            (context, state) => const NoTransitionPage(child: UserView()),
       ),
     ],
   );
