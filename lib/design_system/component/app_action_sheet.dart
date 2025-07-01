@@ -20,36 +20,42 @@ class AppActionSheet extends StatelessWidget {
     // TODO: 플랫폼별 bottom padding 값 조정 필요
 
     return SafeArea(
-      child: Wrap(
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 32),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(AppLayout.radius600),
-                color: AppScaleColor.white100,
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  _AppActionSheetButton(action: negativeAction, negative: true),
-                  ...actions.map(
-                    (e) => Column(
-                      children: [
-                        const Divider(
-                          height: 1,
-                          thickness: 1,
-                          color: AppScaleColor.gray200,
-                        ),
-                        _AppActionSheetButton(action: e),
-                      ],
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: 24),
+        child: Wrap(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 32),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(AppLayout.radius600),
+                  color: AppScaleColor.white100,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    _AppActionSheetButton(
+                      action: negativeAction,
+                      negative: true,
                     ),
-                  ),
-                ],
+                    ...actions.map(
+                      (e) => Column(
+                        children: [
+                          const Divider(
+                            height: 1,
+                            thickness: 1,
+                            color: AppScaleColor.gray200,
+                          ),
+                          _AppActionSheetButton(action: e),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
