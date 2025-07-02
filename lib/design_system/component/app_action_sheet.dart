@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:gllo_flutter/design_system/foundation/color/app_color.dart';
 import 'package:gllo_flutter/design_system/foundation/font/app_text_style.dart';
@@ -9,16 +10,14 @@ import 'package:gllo_flutter/design_system/foundation/size/app_layout.dart';
 class AppActionSheet extends StatelessWidget {
   const AppActionSheet({
     required this.actions,
-    required this.negativeAction,
+    required this.negativeActions,
     super.key,
-  });
+  }) : assert(negativeActions.length > 0 && negativeActions.length <= 2);
   final List<AppActionSheetAction> actions; // 액션 버튼 리스트
-  final AppActionSheetAction negativeAction; // 액션 버튼 (부정)
+  final List<AppActionSheetAction> negativeActions; // 액션 버튼 (부정)
 
   @override
   Widget build(BuildContext context) {
-    // TODO: 플랫폼별 bottom padding 값 조정 필요
-
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.only(bottom: 24),
@@ -34,10 +33,20 @@ class AppActionSheet extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    _AppActionSheetButton(
-                      action: negativeAction,
-                      negative: true,
+                    ...negativeActions.mapIndexed(
+                      (index, e) => Column(
+                        children: [
+                          if (index != 0)
+                            const Divider(
+                              height: 1,
+                              thickness: 1,
+                              color: AppScaleColor.gray200,
+                            ),
+                          _AppActionSheetButton(action: e, negative: true),
+                        ],
+                      ),
                     ),
+
                     ...actions.map(
                       (e) => Column(
                         children: [
@@ -77,7 +86,7 @@ class _AppActionSheetButton extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: color값 수정 예정
     final textStyle = AppTextStyle.textMr.copyWith(
-      color: negative ? AppScaleColor.red : const Color(0xFF333333),
+      color: negative ? AppScaleColor.red : AppScaleColor.gray900,
     );
 
     return GestureDetector(
