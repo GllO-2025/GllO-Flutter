@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gllo_flutter/design_system/font/app_text_style.dart';
 import 'package:gllo_flutter/design_system/foundation/color/app_color.dart';
+import 'package:gllo_flutter/design_system/foundation/font/app_text_style.dart';
 import 'package:gllo_flutter/design_system/foundation/size/app_layout.dart';
 
 /// Segment Controll
