@@ -24,6 +24,7 @@ class AppRouter {
 
   late final GoRouter routerConfig = GoRouter(
     initialLocation: Routes.home.name,
+    navigatorKey: rootNavigatorKey,
     routes: [
       /// 샘플 화면
       GoRoute(

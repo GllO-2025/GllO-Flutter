@@ -16,6 +16,12 @@ class MyApp extends ConsumerWidget {
         scaffoldBackgroundColor: AppScaleColor.white100,
       ),
       routerConfig: ref.read(appRouterProvider).routerConfig,
+      builder:
+          (context, child) => Overlay(
+            initialEntries: [
+              if (child != null) ...[OverlayEntry(builder: (context) => child)],
+            ],
+          ),
     );
   }
 }
