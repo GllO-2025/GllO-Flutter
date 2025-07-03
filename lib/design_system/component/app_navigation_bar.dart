@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gllo_flutter/app/asset/assets.gen.dart';
 import 'package:gllo_flutter/app/router/routes.dart';
-import 'package:gllo_flutter/design_system/font/app_text_style.dart';
 import 'package:gllo_flutter/design_system/foundation/color/app_color.dart';
+import 'package:gllo_flutter/design_system/foundation/font/app_text_style.dart';
 import 'package:gllo_flutter/design_system/foundation/shadow/app_shadow.dart';
 import 'package:gllo_flutter/design_system/foundation/size/app_layout.dart';
 import 'package:go_router/go_router.dart';

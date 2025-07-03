@@ -25,11 +25,29 @@ class $AssetAnimationGen {
 class $AssetFontGen {
   const $AssetFontGen();
 
+  /// File path: asset/font/Caveat-Bold.ttf
+  String get caveatBold => 'asset/font/Caveat-Bold.ttf';
+
+  /// File path: asset/font/Pretendard-Medium.otf
+  String get pretendardMedium => 'asset/font/Pretendard-Medium.otf';
+
+  /// File path: asset/font/Pretendard-Regular.otf
+  String get pretendardRegular => 'asset/font/Pretendard-Regular.otf';
+
+  /// File path: asset/font/Pretendard-SemiBold.otf
+  String get pretendardSemiBold => 'asset/font/Pretendard-SemiBold.otf';
+
   /// File path: asset/font/font.json
   String get font => 'asset/font/font.json';
 
   /// List of all assets
-  List<String> get values => [font];
+  List<String> get values => [
+    caveatBold,
+    pretendardMedium,
+    pretendardRegular,
+    pretendardSemiBold,
+    font,
+  ];
 }
 
 class $AssetIconGen {
@@ -237,8 +255,14 @@ class $AssetIconMediaGen {
   SvgGenImage get camera2Fill =>
       const SvgGenImage('asset/icon/media/camera_2_fill.svg');
 
+  /// File path: asset/icon/media/pic_fill.svg
+  SvgGenImage get picFill => const SvgGenImage('asset/icon/media/pic_fill.svg');
+
+  /// File path: asset/icon/media/video.svg
+  SvgGenImage get video => const SvgGenImage('asset/icon/media/video.svg');
+
   /// List of all assets
-  List<SvgGenImage> get values => [camera2Fill];
+  List<SvgGenImage> get values => [camera2Fill, picFill, video];
 }
 
 class $AssetIconQuickActionGen {
@@ -255,6 +279,22 @@ class $AssetIconQuickActionGen {
   SvgGenImage get bookmarkFill =>
       const SvgGenImage('asset/icon/quick_action/bookmark_fill.svg');
 
+  /// File path: asset/icon/quick_action/check_fill.svg
+  SvgGenImage get checkFill =>
+      const SvgGenImage('asset/icon/quick_action/check_fill.svg');
+
+  /// File path: asset/icon/quick_action/comment_2_fill.svg
+  SvgGenImage get comment2Fill =>
+      const SvgGenImage('asset/icon/quick_action/comment_2_fill.svg');
+
+  /// File path: asset/icon/quick_action/send_fill.svg
+  SvgGenImage get sendFill =>
+      const SvgGenImage('asset/icon/quick_action/send_fill.svg');
+
+  /// File path: asset/icon/quick_action/share_forward_fill.svg
+  SvgGenImage get shareForwardFill =>
+      const SvgGenImage('asset/icon/quick_action/share_forward_fill.svg');
+
   /// File path: asset/icon/quick_action/transfer_line.svg
   SvgGenImage get transferLine =>
       const SvgGenImage('asset/icon/quick_action/transfer_line.svg');
@@ -264,6 +304,10 @@ class $AssetIconQuickActionGen {
     add2,
     bookmarkAddLine,
     bookmarkFill,
+    checkFill,
+    comment2Fill,
+    sendFill,
+    shareForwardFill,
     transferLine,
   ];
 }
@@ -274,6 +318,13 @@ class $AssetIconSystemGen {
   /// File path: asset/icon/system/bell_line2.svg
   SvgGenImage get bellLine2 =>
       const SvgGenImage('asset/icon/system/bell_line2.svg');
+
+  /// File path: asset/icon/system/cancel.svg
+  SvgGenImage get cancel => const SvgGenImage('asset/icon/system/cancel.svg');
+
+  /// File path: asset/icon/system/check_circle_fill.svg
+  SvgGenImage get checkCircleFill =>
+      const SvgGenImage('asset/icon/system/check_circle_fill.svg');
 
   /// File path: asset/icon/system/close_line.svg
   SvgGenImage get closeLine =>
@@ -303,13 +354,26 @@ class $AssetIconSystemGen {
   SvgGenImage get notificationLine =>
       const SvgGenImage('asset/icon/system/notification_line.svg');
 
+  /// File path: asset/icon/system/replay.svg
+  SvgGenImage get replay => const SvgGenImage('asset/icon/system/replay.svg');
+
   /// File path: asset/icon/system/search_line.svg
   SvgGenImage get searchLine =>
       const SvgGenImage('asset/icon/system/search_line.svg');
 
+  /// File path: asset/icon/system/settings_3_line.svg
+  SvgGenImage get settings3Line =>
+      const SvgGenImage('asset/icon/system/settings_3_line.svg');
+
+  /// File path: asset/icon/system/warning_line.svg
+  SvgGenImage get warningLine =>
+      const SvgGenImage('asset/icon/system/warning_line.svg');
+
   /// List of all assets
   List<SvgGenImage> get values => [
     bellLine2,
+    cancel,
+    checkCircleFill,
     closeLine,
     eye2Line,
     eyeCloseLine,
@@ -317,7 +381,10 @@ class $AssetIconSystemGen {
     menuLine,
     more1Fill,
     notificationLine,
+    replay,
     searchLine,
+    settings3Line,
+    warningLine,
   ];
 }
 

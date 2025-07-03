@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gllo_flutter/design_system/font/app_text_style.dart';
 import 'package:gllo_flutter/design_system/foundation/color/app_color.dart';
+import 'package:gllo_flutter/design_system/foundation/font/app_text_style.dart';
 
 /// Tab
 /// https://www.figma.com/design/i2Rdv9uaE5bQ1TTasEKoNN/GllO-%EC%9E%91%EC%97%85-%EB%AC%B8%EC%84%9C-v1.0?node-id=1399-26247&m=dev
