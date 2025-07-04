@@ -5,6 +5,11 @@ import 'package:gllo_flutter/app/router/app_router.dart';
 /// fluttertoast를 이용하여 Toast 관리
 /// 앱의 Snack Bar와 Toast를 표시할때 사용
 class ToastManager {
+  factory ToastManager() => instance;
+  ToastManager._();
+
+  static ToastManager instance = ToastManager._();
+
   final _fToast = FToast();
 
   bool _isInitialized = false;
