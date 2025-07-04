@@ -89,7 +89,7 @@ class AppSnackBarAction extends StatelessWidget {
   }) : type = _AppSnackBarActionType.undo;
 
   /// action type : close
-  const AppSnackBarAction.close({required this.onTap, super.key})
+  const AppSnackBarAction.close({this.onTap, super.key})
     : type = _AppSnackBarActionType.close,
       text = null;
 
@@ -101,7 +101,11 @@ class AppSnackBarAction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap:
+          onTap ??
+          () {
+            ToastManager().dismiss();
+          },
       behavior: HitTestBehavior.translucent,
       child: Padding(
         padding: const EdgeInsets.all(8),
