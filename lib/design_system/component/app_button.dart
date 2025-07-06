@@ -46,7 +46,7 @@ class AppButton extends StatelessWidget {
     );
 
     return Opacity(
-      opacity: state == AppButtonState.disabled ? 0.6 : 1.0,
+      opacity: 1,
       child: ElevatedButton(
         onPressed: state == AppButtonState.disabled ? null : onPressed,
         style: ElevatedButton.styleFrom(
@@ -97,9 +97,23 @@ class AppButton extends StatelessWidget {
 
   Color _contentColor() {
     if (style == AppButtonStyle.primary) {
-      return AppScaleColor.white100;
+      switch (state) {
+        case AppButtonState.enabled:
+          return AppScaleColor.gray50;
+        case AppButtonState.pressed:
+          return AppScaleColor.gray50;
+        case AppButtonState.disabled:
+          return AppScaleColor.gray500;
+      }
     } else {
-      return AppScaleColor.gray700;
+      switch (state) {
+        case AppButtonState.enabled:
+          return AppScaleColor.gray600;
+        case AppButtonState.pressed:
+          return AppScaleColor.gray600;
+        case AppButtonState.disabled:
+          return AppScaleColor.gray400;
+      }
     }
   }
 
