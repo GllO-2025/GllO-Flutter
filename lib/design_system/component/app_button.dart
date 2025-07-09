@@ -37,11 +37,12 @@ class AppButton extends StatelessWidget {
           AppButtonSize.large: 52.0,
         }[size]!;
 
-    final textStyle = {
-      AppButtonSize.small: AppTextStyle.textSm,
-      AppButtonSize.medium: AppTextStyle.textMm,
-      AppButtonSize.large: AppTextStyle.textMm,
-    }[size]!;
+    final textStyle =
+        {
+          AppButtonSize.small: AppTextStyle.textSm,
+          AppButtonSize.medium: AppTextStyle.textMm,
+          AppButtonSize.large: AppTextStyle.textMm,
+        }[size]!;
 
     const padding = EdgeInsets.symmetric(
       horizontal: AppLayout.marginPaddingM,
@@ -71,7 +72,8 @@ class AppButton extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           if (showIcon && icon != null) _buildIcon(),
-          if (showIcon && showText) const SizedBox(width: AppLayout.marginPaddingXxs),
+          if (showIcon && showText)
+            const SizedBox(width: AppLayout.marginPaddingXxs),
           if (showText) Text(label, style: textStyle),
         ],
       ),
