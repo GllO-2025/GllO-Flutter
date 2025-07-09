@@ -7,6 +7,7 @@ import 'package:gllo_flutter/design_system/foundation/size/app_layout.dart';
 import 'package:go_router/go_router.dart';
 
 /// Bottom Sheet (기본형)
+/// [showAppBottomSheet]를 이용
 /// https://www.figma.com/design/i2Rdv9uaE5bQ1TTasEKoNN/GllO-%EC%9E%91%EC%97%85-%EB%AC%B8%EC%84%9C-v1.0?node-id=1792-31668&m=dev
 class AppBottomSheet extends StatelessWidget {
   const AppBottomSheet({
