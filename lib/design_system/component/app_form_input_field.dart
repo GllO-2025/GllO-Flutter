@@ -21,7 +21,7 @@ class AppFormInputField extends FormField<String> {
   }) : super(
          initialValue: controller.text,
          enabled: isEnabled,
-         builder: (FormFieldState<String> field) {
+         builder: (field) {
            return _AppInputFieldInternal(
              label: label,
              controller: controller,
@@ -148,6 +148,7 @@ class _AppFormInputFieldInternalState extends State<_AppInputFieldInternal> {
         SizedBox(
           height: 48,
           child: TextField(
+            onTapOutside: (event) => FocusScope.of(context).unfocus(),
             controller: widget.controller,
             focusNode: _focusNode,
             enabled: widget.isEnabled,

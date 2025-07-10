@@ -108,6 +108,7 @@ class _AppInputFieldState extends State<AppInputField> {
             valueListenable: isObscured,
             builder: (context, obscure, _) {
               return TextField(
+                onTapOutside: (event) => FocusScope.of(context).unfocus(),
                 controller: widget.controller,
                 focusNode: _focusNode,
                 enabled: widget.isEnabled,
