@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gllo_flutter/design_system/component/app_action_button.dart';
 import 'package:gllo_flutter/design_system/foundation/color/app_color.dart';
 import 'package:gllo_flutter/design_system/foundation/font/app_text_style.dart';
 import 'package:gllo_flutter/design_system/foundation/size/app_layout.dart';
@@ -18,8 +19,8 @@ class AppAlertDialog extends StatelessWidget {
   });
   final String title; // 제목
   final String description; // 내용
-  final AppDialogButton button; // 버튼
-  final AppDialogButton negativeButton; // 버튼 (부정)
+  final AppAction button; // 버튼
+  final AppAction negativeButton; // 버튼 (부정)
 
   @override
   Widget build(BuildContext context) {
@@ -61,9 +62,9 @@ class AppAlertDialog extends StatelessWidget {
             ),
           ),
           _divider(),
-          _AppDialogButton(button: negativeButton, negative: true),
+          negativeButton.button(negative: true),
           _divider(),
-          _AppDialogButton(button: button),
+          button.button(),
         ],
       ),
     );
@@ -71,39 +72,4 @@ class AppAlertDialog extends StatelessWidget {
 
   Widget _divider() =>
       const Divider(height: 1, thickness: 1, color: AppScaleColor.gray200);
-}
-
-class AppDialogButton {
-  const AppDialogButton({required this.text, required this.onTap});
-  final String text;
-  final VoidCallback onTap;
-}
-
-class _AppDialogButton extends StatelessWidget {
-  const _AppDialogButton({required this.button, this.negative = false});
-  final AppDialogButton button;
-  final bool negative;
-
-  @override
-  Widget build(BuildContext context) {
-    final textStyle = AppTextStyle.textMr.copyWith(
-      color: negative ? AppScaleColor.red : AppScaleColor.gray900,
-    );
-
-    return GestureDetector(
-      onTap: button.onTap,
-      behavior: HitTestBehavior.translucent,
-      child: Container(
-        height: 64,
-        padding: const EdgeInsets.all(10),
-        child: Center(
-          child: Text(
-            button.text,
-            style: textStyle,
-            textAlign: TextAlign.center,
-          ),
-        ),
-      ),
-    );
-  }
 }

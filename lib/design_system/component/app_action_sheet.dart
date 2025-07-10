@@ -1,7 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
+import 'package:gllo_flutter/design_system/component/app_action_button.dart';
 import 'package:gllo_flutter/design_system/foundation/color/app_color.dart';
-import 'package:gllo_flutter/design_system/foundation/font/app_text_style.dart';
 import 'package:gllo_flutter/design_system/foundation/size/app_layout.dart';
 
 /// Action Sheet
@@ -13,8 +13,8 @@ class AppActionSheet extends StatelessWidget {
     required this.negativeActions,
     super.key,
   }) : assert(negativeActions.length > 0 && negativeActions.length <= 2);
-  final List<AppActionSheetAction> actions; // 액션 버튼 리스트
-  final List<AppActionSheetAction> negativeActions; // 액션 버튼 (부정)
+  final List<AppAction> actions; // 액션 버튼 리스트
+  final List<AppAction> negativeActions; // 액션 버튼 (부정)
 
   @override
   Widget build(BuildContext context) {
@@ -37,18 +37,13 @@ class AppActionSheet extends StatelessWidget {
                       (index, e) => Column(
                         children: [
                           if (index != 0) _divider(),
-                          _AppActionSheetButton(action: e, negative: true),
+                          e.button(negative: true),
                         ],
                       ),
                     ),
 
                     ...actions.map(
-                      (e) => Column(
-                        children: [
-                          _divider(),
-                          _AppActionSheetButton(action: e),
-                        ],
-                      ),
+                      (e) => Column(children: [_divider(), e.button()]),
                     ),
                   ],
                 ),
@@ -62,43 +57,6 @@ class AppActionSheet extends StatelessWidget {
 
   Widget _divider() =>
       const Divider(height: 1, thickness: 1, color: AppScaleColor.gray200);
-}
-
-/// Action Sheet Action
-class AppActionSheetAction {
-  const AppActionSheetAction({required this.text, required this.onTap});
-  final String text;
-  final VoidCallback onTap;
-}
-
-class _AppActionSheetButton extends StatelessWidget {
-  const _AppActionSheetButton({required this.action, this.negative = false});
-  final AppActionSheetAction action;
-  final bool negative;
-
-  @override
-  Widget build(BuildContext context) {
-    // TODO: color값 수정 예정
-    final textStyle = AppTextStyle.textMr.copyWith(
-      color: negative ? AppScaleColor.red : AppScaleColor.gray900,
-    );
-
-    return GestureDetector(
-      onTap: action.onTap,
-      behavior: HitTestBehavior.translucent,
-      child: Container(
-        height: 64,
-        padding: const EdgeInsets.all(10),
-        child: Center(
-          child: Text(
-            action.text,
-            style: textStyle,
-            textAlign: TextAlign.center,
-          ),
-        ),
-      ),
-    );
-  }
 }
 
 /// App Action Sheet 표시
