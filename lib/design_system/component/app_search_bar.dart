@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gllo_flutter/app/asset/assets.gen.dart';
 import 'package:gllo_flutter/design_system/foundation/color/app_color.dart';
 import 'package:gllo_flutter/design_system/foundation/font/app_text_style.dart';
@@ -53,7 +52,7 @@ class _AppSearchBarState extends State<AppSearchBar> {
   Widget? get _prefixIcon {
     if (!hasText && !hasFocus) {
       return Padding(
-        padding: const EdgeInsets.all(12),
+        padding: const EdgeInsets.only(left: 16, right: 12),
         child: GestureDetector(
           child: Assets.icon.system.searchLine.svg(
             width: 24,
@@ -68,7 +67,7 @@ class _AppSearchBarState extends State<AppSearchBar> {
     }
 
     return Padding(
-      padding: const EdgeInsets.all(12),
+      padding: const EdgeInsets.only(left: 16, right: 12),
       child: GestureDetector(
         onTap: widget.onBackPressed,
         behavior: HitTestBehavior.opaque,
@@ -91,7 +90,7 @@ class _AppSearchBarState extends State<AppSearchBar> {
     hasFocus ? Assets.icon.system.cancel : Assets.icon.system.closeLine;
 
     return Padding(
-      padding: const EdgeInsets.all(12),
+      padding: const EdgeInsets.only(left: 12, right: 16),
       child: GestureDetector(
         onTap: () {
           widget.controller.clear();
@@ -113,8 +112,9 @@ class _AppSearchBarState extends State<AppSearchBar> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 50,
+      height: 56,
       child: TextField(
+        onTapOutside: (event) => FocusScope.of(context).unfocus(),
         controller: widget.controller,
         focusNode: _focusNode,
         onChanged: widget.onChanged,
@@ -123,7 +123,7 @@ class _AppSearchBarState extends State<AppSearchBar> {
           fillColor: AppScaleColor.white100,
           hintText: widget.hintText,
           hintStyle: AppTextStyle.textMm.copyWith(color: AppScaleColor.gray400),
-          contentPadding: const EdgeInsets.symmetric(vertical: 12),
+          contentPadding: const EdgeInsets.symmetric(vertical: 16),
           prefixIcon: _prefixIcon,
           suffixIcon: _suffixIcon,
           border: OutlineInputBorder(
