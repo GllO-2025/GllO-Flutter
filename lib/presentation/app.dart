@@ -13,6 +13,7 @@ class MyApp extends ConsumerWidget {
       theme: ThemeData(
         brightness: Brightness.light,
         primaryColor: AppScaleColor.orange500,
+        scaffoldBackgroundColor: AppScaleColor.white100,
       ),
       routerConfig: ref.read(appRouterProvider).routerConfig,
     );
