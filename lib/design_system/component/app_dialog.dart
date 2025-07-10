@@ -60,14 +60,17 @@ class AppAlertDialog extends StatelessWidget {
               ],
             ),
           ),
-          const Divider(height: 1, thickness: 1, color: AppScaleColor.gray200),
+          _divider(),
           _AppDialogButton(button: negativeButton, negative: true),
-          const Divider(height: 1, thickness: 1, color: AppScaleColor.gray200),
+          _divider(),
           _AppDialogButton(button: button),
         ],
       ),
     );
   }
+
+  Widget _divider() =>
+      const Divider(height: 1, thickness: 1, color: AppScaleColor.gray200);
 }
 
 class AppDialogButton {

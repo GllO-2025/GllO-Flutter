@@ -36,12 +36,7 @@ class AppActionSheet extends StatelessWidget {
                     ...negativeActions.mapIndexed(
                       (index, e) => Column(
                         children: [
-                          if (index != 0)
-                            const Divider(
-                              height: 1,
-                              thickness: 1,
-                              color: AppScaleColor.gray200,
-                            ),
+                          if (index != 0) _divider(),
                           _AppActionSheetButton(action: e, negative: true),
                         ],
                       ),
@@ -50,11 +45,7 @@ class AppActionSheet extends StatelessWidget {
                     ...actions.map(
                       (e) => Column(
                         children: [
-                          const Divider(
-                            height: 1,
-                            thickness: 1,
-                            color: AppScaleColor.gray200,
-                          ),
+                          _divider(),
                           _AppActionSheetButton(action: e),
                         ],
                       ),
@@ -68,6 +59,9 @@ class AppActionSheet extends StatelessWidget {
       ),
     );
   }
+
+  Widget _divider() =>
+      const Divider(height: 1, thickness: 1, color: AppScaleColor.gray200);
 }
 
 /// Action Sheet Action
