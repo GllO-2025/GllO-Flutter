@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gllo_flutter/app/asset/assets.gen.dart';
 import 'package:gllo_flutter/design_system/foundation/color/app_color.dart';
 import 'package:gllo_flutter/design_system/foundation/font/app_text_style.dart';
 import 'package:gllo_flutter/design_system/foundation/size/app_layout.dart';
@@ -20,7 +19,7 @@ class AppTextAreaField extends FormField<String> {
   }) : super(
          initialValue: controller.text,
          enabled: isEnabled,
-         builder: (FormFieldState<String> field) {
+         builder: (field) {
            return _AppTextAreaInternal(
              label: label,
              controller: controller,
@@ -127,6 +126,7 @@ class _AppTextAreaInternalState extends State<_AppTextAreaInternal> {
         Stack(
           children: [
             TextField(
+              onTapOutside: (event) => FocusScope.of(context).unfocus(),
               controller: widget.controller,
               enabled: widget.isEnabled,
               maxLength: widget.maxLength,
