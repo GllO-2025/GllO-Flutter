@@ -118,6 +118,7 @@ class _AppSearchBarState extends State<AppSearchBar> {
         controller: widget.controller,
         focusNode: _focusNode,
         onChanged: widget.onChanged,
+        style: AppTextStyle.textMm.copyWith(color: AppScaleColor.gray800),
         decoration: InputDecoration(
           filled: true,
           fillColor: AppScaleColor.white100,
