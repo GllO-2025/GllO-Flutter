@@ -12,7 +12,6 @@ class AppChip extends StatelessWidget {
     super.key,
     this.icon,
     required this.text,
-    this.showIcon = false,
     required this.isSelected,
     required this.onTap,
   }) : type = AppChipType.round;
@@ -20,13 +19,11 @@ class AppChip extends StatelessWidget {
     super.key,
     this.icon,
     required this.text,
-    this.showIcon = false,
     required this.isSelected,
     required this.onTap,
   }) : type = AppChipType.rectangular;
   final SvgGenImage? icon;
   final String text;
-  final bool showIcon;
   final bool isSelected;
   final AppChipType type;
   final VoidCallback onTap;
@@ -68,7 +65,7 @@ class AppChip extends StatelessWidget {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            if (showIcon && icon != null)
+            if (icon != null)
               Padding(
                 padding: const EdgeInsets.only(
                   right: AppLayout.marginPaddingXxs,
