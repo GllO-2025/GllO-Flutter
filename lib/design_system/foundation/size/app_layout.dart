@@ -22,6 +22,7 @@ abstract final class AppLayout {
   static const double radius200 = _AppSize.spacingSize2;
   static const double radius300 = _AppSize.spacingSize3;
   static const double radius400 = _AppSize.spacingSize6;
+  static const double radius600 = _AppSize.spacingSize6;
   static const double radius800 = _AppSize.spacingSize8;
   static const double radius999 = _AppSize.spacingSize999;
 }
