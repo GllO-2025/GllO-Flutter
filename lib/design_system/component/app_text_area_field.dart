@@ -170,21 +170,22 @@ class _AppTextAreaInternalState extends State<_AppTextAreaInternal> {
               ),
           ],
         ),
-        SizedBox(height: AppLayout.marginPaddingXxs),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(
-            AppLayout.marginPaddingXs,
-            5,
-            AppLayout.marginPaddingXs,
-            5,
-          ),
-          child: Text(
-            widget.errorText ?? widget.helpMessage ?? '',
-            style: AppTextStyle.textSr.copyWith(
-              color: isError ? AppScaleColor.red : AppScaleColor.gray500,
+        const SizedBox(height: AppLayout.marginPaddingXxs),
+        if (widget.errorText != null || widget.helpMessage != null)
+          Padding(
+            padding: const EdgeInsets.fromLTRB(
+              AppLayout.marginPaddingXs,
+              5,
+              AppLayout.marginPaddingXs,
+              5,
+            ),
+            child: Text(
+              widget.errorText ?? widget.helpMessage ?? '',
+              style: AppTextStyle.textSr.copyWith(
+                color: isError ? AppScaleColor.red : AppScaleColor.gray500,
+              ),
             ),
           ),
-        ),
       ],
     );
   }
