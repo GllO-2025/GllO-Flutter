@@ -29,10 +29,12 @@ void main() async {
   runApp(
     ProviderScope(
       child: EasyLocalization(
-        // 지원 언어팩 설정
+        // 지원 언어 설정
         supportedLocales: Localization.values.map((e) => e.locale).toList(),
-        // 기본적으로 지원되는 언어
+        // 시스템 기본 언어가 supportedLocales에 존재하지 않은 언어인 경우 디폴트로 설정할 언어
         fallbackLocale: Localization.en.locale,
+        // 기본적으로 지원되는 언어
+        startLocale: Localization.en.locale,
         path: 'asset/translation',
         child: const MyApp(),
       ),
