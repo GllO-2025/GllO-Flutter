@@ -95,11 +95,17 @@ class $AssetPngGen {
 class $AssetTranslationGen {
   const $AssetTranslationGen();
 
+  /// File path: asset/translation/en_US.json
+  String get enUS => 'asset/translation/en_US.json';
+
+  /// File path: asset/translation/ko_KR.json
+  String get koKR => 'asset/translation/ko_KR.json';
+
   /// File path: asset/translation/translation.json
   String get translation => 'asset/translation/translation.json';
 
   /// List of all assets
-  List<String> get values => [translation];
+  List<String> get values => [enUS, koKR, translation];
 }
 
 class $AssetIconArrowGen {

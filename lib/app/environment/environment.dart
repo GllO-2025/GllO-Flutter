@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:gllo_flutter/app/environment/environment_type.dart';
 
 /// 앱의 실핼 환경 설정 및 초기화
@@ -26,7 +27,8 @@ class Environment {
       return;
     }
 
-    if (_type == EnvironmentType.dev) {}
+    // EasyLocalization 초기화
+    await EasyLocalization.ensureInitialized();
   }
 
   static Environment get instance => _instance;
