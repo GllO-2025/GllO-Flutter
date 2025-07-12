@@ -1,0 +1,12 @@
+{
+  "splash" : "Settle in Korea, one meal at a time, GIIO",
+  "onboarding": {
+    "title1" : "Discover real local spots verified by students",
+    "desc1" : "Find local food spots with short-form reviews from fellow students",
+    "title2" : "Verify easily with your school email",
+    "desc2" : "Get trusted food recommendations",
+    "title3" : "Get food spots just for you",
+    "desc3" : "Receive AI-personalized food recommendations",
+    "nextButton" : "Next"
+  }
+}
