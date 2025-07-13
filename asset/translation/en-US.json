@@ -1,12 +1,156 @@
 {
-  "splash" : "Settle in Korea, one meal at a time, GIIO",
+  "splash" : "Settle in Korea, one meal\nat a time, GIIO",
   "onboarding": {
-    "title1" : "Discover real local spots verified by students",
-    "desc1" : "Find local food spots with short-form reviews from fellow students",
-    "title2" : "Verify easily with your school email",
-    "desc2" : "Get trusted food recommendations",
-    "title3" : "Get food spots just for you",
-    "desc3" : "Receive AI-personalized food recommendations",
+    "title1" : "Discover real local spots\nverified by students",
+    "desc1" : "Find local food spots with short-\nform reviews from fellow students",
+    "title2" : "Verify easily with your\nschool email",
+    "desc2" : "Get trusted food\nrecommendations",
+    "title3" : "Get food spots just\nfor you",
+    "desc3" : "Receive AI-personalized food\nrecommendations",
     "nextButton" : "Next"
+  },
+  "startSignUp" : {
+    "title": "Settle in Korea, one meal\nat a time, GIIO",
+    "signUpButtonText" : "Sign up with university email",
+    "signInButtonText" : "I already have an account",
+    "findAccount" : "Forgot your ID or password?",
+    "socialSignInDesc" : "Or log in with a social account"
+  },
+  "signIn" : {
+    "appBarTitle" : "Log In",
+    "idHintText" : "Enter university email or username",
+    "passwordHintText" : "Enter password",
+    "signInButtonText" : "Log In",
+    "findAccount" : "Find ID or password",
+    "socialSignInDesc" : "Or log in with a social account",
+    "error" : {
+      "notFoundId" : "The school email or username is not registered.",
+      "wrongPassword" : "Passwords do not match."
+    }
+  },
+  "signUpBirthDay" : {
+    "appBarTitle" : "Sign up",
+    "title" : "When\nis your birthday?",
+    "desc" : "Your birthday won't be shown",
+    "inputHintText" : "YYYY-MM-DD",
+    "nextButtonText" : "Next",
+    "error" : {
+      "invalidBirthDay" : "Include '-' in your number"
+    }
+  },
+  "signUpTerms" : {
+    "appBarTitle" : "Sign Up",
+    "title" : "Please\nagree to the terms",
+    "desc" : "Required terms to use the service",
+    "allAgreeText" : "Agree to all",
+    "termsText" : "Terms of service",
+    "locationBasedTermsText" : "Location service terms",
+    "marketingConsentText" : "Marketing consent",
+    "label" : {
+      "required" : "(Required)",
+      "optional" : "(Optional)"
+    },
+    "nextButtonText" : "Next"
+  },
+  "signUpEmail" : {
+    "appBarTitle" : "Sign Up",
+    "title" : "Enter\nyour university email",
+    "desc" : "Only available to current students",
+    "emailInputHintText" : "example@university.edu",
+    "verifyStudentIdCard" : "No university email? Verify with student ID",
+    "codeInputHintText" : "6-digit code",
+    "resendCodeText" : "Resend code",
+    "sendCodeText" : "Send code",
+    "verifyCodeText" : "Verify code",
+    "emailInputHelperMessage" : "Please use your university email",
+    "nextButtonText" : "Next",
+    "error" : {
+      "invalidEmail" : "Only school emails are accepted",
+      "wrongCode" : "The code does not match"
+    }
+  },
+  "signUpNameAndPassword" : {
+    "appBarTitle" : "Sign Up",
+    "title" : "Create\nyour username and password",
+    "desc" : "Your username is visible to others",
+    "nameInputHintText" : "Username",
+    "nameInputHelperMessage" : "Use letters,numbers,_ or .",
+    "canUseNameHelperMessage" : "Username is available",
+    "passwordInputHintText" : "Password",
+    "passwordInputHelperMessage" : "At least 8 characters, letters, numbers, symbols",
+    "confirmPasswordInputHintText" : "Confirm password",
+    "nextButtonText" : "Next",
+    "error" : {
+      "duplicateName" : "This username is already taken",
+      "invalidName" : "Only letters,numbers, _ or . allowed",
+      "exceedLimit" : "Username must be under 30 characters",
+      "mismatchPassword" : "Please re-enter your password"
+    }
+  },
+  "signUpCountry" : {
+    "appBarTitle" : "Sign Up",
+    "title" : "Which country are you from?",
+    "desc" : "Country cannot be changed later",
+    "countryInputHintText" : "Search for your country",
+    "nextButtonText" : "Next"
+  },
+  "signUpSuccess" : {
+    "title" : "You’ve successfully signed up.",
+    "desc" : "Now you can find the real deal,\nverified by current students",
+    "buttonText" : "Find restaurants"
+  },
+  "signUpStudentIdCard" : {
+    "appBarTitle" : "Sign Up",
+    "title" : "Upload\nyour current student ID",
+    "desc" : "Only students can use this service",
+    "imageUploadLabel" : "Upload student ID image",
+    "imageUploadHintText" : "JPG or PNG,max 10MB",
+    "openCameraButtonText" : "Take a photo",
+    "nextButtonText" : "Next",
+    "error" : {
+      "exceedCapacity" : {
+        "title": "Image upload failed",
+        "desc" : "Only files in JPG or PNG format,\n10MB or less, are accepted",
+        "button" : "Okay"
+      }
+    }
+  },
+  "findAccount" : {
+    "appBarTitle" : "Find ID or password",
+    "findIdTab" : {
+      "name" : "ID",
+      "idInputHintText" : "example@university.edu",
+      "idInputHelperMessage" : "Enter your university or recovery email",
+      "sendCodeText" : "Send code",
+      "verifyCodeText" : "Verify code",
+      "codeInputHelperMessage" : "Enter the code sent to your email",
+      "error" : {
+        "notFoundId" : "Not a registered or recovery email",
+        "wrongCode" : "The code is incorrect"
+      },
+      "success" : {
+        "title" : "Your ID is found!",
+        "desc" : "This is the ID joined to your email",
+        "signInButtonText" : "Login"
+      }
+    },
+    "findPasswordTab" : {
+      "name" : "Password",
+      "passwordInputLabel" : "Set new password",
+      "passwordInputHintText" : "New password (8+ characters)",
+      "confirmPasswordInputHintText" : "Re-enter the new password",
+      "passwordHelperMessage" : "At least 8 characters, letters, numbers, symbols or recovery email,\nMust be different from old password",
+      "resetPasswordButtonText" : "Change password",
+      "error" : {
+        "sameOldPassword" : "Must be different from old password",
+        "invalidPassword" : "Please re-enter your password"
+      },
+      "success" : {
+        "title" : "Password is changed!",
+        "desc" : "Please log in with your new password",
+        "signInButtonText" : "Login",
+        "resetPasswordButtonText" : "Reset Password"
+      }
+    }
   }
 }
