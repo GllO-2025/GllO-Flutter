@@ -28,90 +28,92 @@
       "wrongPassword" : "Passwords do not match."
     }
   },
-  "signUpBirthDay" : {
-    "appBarTitle" : "Sign up",
-    "title" : "When\nis your birthday?",
-    "desc" : "Your birthday won't be shown",
-    "inputHintText" : "YYYY-MM-DD",
-    "nextButtonText" : "Next",
-    "error" : {
-      "invalidBirthDay" : "Include '-' in your number"
-    }
-  },
-  "signUpTerms" : {
-    "appBarTitle" : "Sign Up",
-    "title" : "Please\nagree to the terms",
-    "desc" : "Required terms to use the service",
-    "allAgreeText" : "Agree to all",
-    "termsText" : "Terms of service",
-    "locationBasedTermsText" : "Location service terms",
-    "marketingConsentText" : "Marketing consent",
-    "label" : {
-      "required" : "(Required)",
-      "optional" : "(Optional)"
+  "signUp" : {
+    "birthDay" : {
+      "appBarTitle" : "Sign up",
+      "title" : "When\nis your birthday?",
+      "desc" : "Your birthday won't be shown",
+      "inputHintText" : "YYYY-MM-DD",
+      "nextButtonText" : "Next",
+      "error" : {
+        "invalidBirthDay" : "Include '-' in your number"
+      }
     },
-    "nextButtonText" : "Next"
-  },
-  "signUpEmail" : {
-    "appBarTitle" : "Sign Up",
-    "title" : "Enter\nyour university email",
-    "desc" : "Only available to current students",
-    "emailInputHintText" : "example@university.edu",
-    "verifyStudentIdCard" : "No university email? Verify with student ID",
-    "codeInputHintText" : "6-digit code",
-    "resendCodeText" : "Resend code",
-    "sendCodeText" : "Send code",
-    "verifyCodeText" : "Verify code",
-    "emailInputHelperMessage" : "Please use your university email",
-    "nextButtonText" : "Next",
-    "error" : {
-      "invalidEmail" : "Only school emails are accepted",
-      "wrongCode" : "The code does not match"
-    }
-  },
-  "signUpNameAndPassword" : {
-    "appBarTitle" : "Sign Up",
-    "title" : "Create\nyour username and password",
-    "desc" : "Your username is visible to others",
-    "nameInputHintText" : "Username",
-    "nameInputHelperMessage" : "Use letters,numbers,_ or .",
-    "canUseNameHelperMessage" : "Username is available",
-    "passwordInputHintText" : "Password",
-    "passwordInputHelperMessage" : "At least 8 characters, letters, numbers, symbols",
-    "confirmPasswordInputHintText" : "Confirm password",
-    "nextButtonText" : "Next",
-    "error" : {
-      "duplicateName" : "This username is already taken",
-      "invalidName" : "Only letters,numbers, _ or . allowed",
-      "exceedLimit" : "Username must be under 30 characters",
-      "mismatchPassword" : "Please re-enter your password"
-    }
-  },
-  "signUpCountry" : {
-    "appBarTitle" : "Sign Up",
-    "title" : "Which country are you from?",
-    "desc" : "Country cannot be changed later",
-    "countryInputHintText" : "Search for your country",
-    "nextButtonText" : "Next"
-  },
-  "signUpSuccess" : {
-    "title" : "You’ve successfully signed up.",
-    "desc" : "Now you can find the real deal,\nverified by current students",
-    "buttonText" : "Find restaurants"
-  },
-  "signUpStudentIdCard" : {
-    "appBarTitle" : "Sign Up",
-    "title" : "Upload\nyour current student ID",
-    "desc" : "Only students can use this service",
-    "imageUploadLabel" : "Upload student ID image",
-    "imageUploadHintText" : "JPG or PNG,max 10MB",
-    "openCameraButtonText" : "Take a photo",
-    "nextButtonText" : "Next",
-    "error" : {
-      "exceedCapacity" : {
-        "title": "Image upload failed",
-        "desc" : "Only files in JPG or PNG format,\n10MB or less, are accepted",
-        "button" : "Okay"
+    "terms" : {
+      "appBarTitle" : "Sign Up",
+      "title" : "Please\nagree to the terms",
+      "desc" : "Required terms to use the service",
+      "allAgreeText" : "Agree to all",
+      "termsText" : "Terms of service",
+      "locationBasedTermsText" : "Location service terms",
+      "marketingConsentText" : "Marketing consent",
+      "label" : {
+        "required" : "(Required)",
+        "optional" : "(Optional)"
+      },
+      "nextButtonText" : "Next"
+    },
+    "email" : {
+      "appBarTitle" : "Sign Up",
+      "title" : "Enter\nyour university email",
+      "desc" : "Only available to current students",
+      "emailInputHintText" : "example@university.edu",
+      "verifyStudentIdCard" : "No university email? Verify with student ID",
+      "codeInputHintText" : "6-digit code",
+      "resendCodeText" : "Resend code",
+      "sendCodeText" : "Send code",
+      "verifyCodeText" : "Verify code",
+      "emailInputHelperMessage" : "Please use your university email",
+      "nextButtonText" : "Next",
+      "error" : {
+        "invalidEmail" : "Only school emails are accepted",
+        "wrongCode" : "The code does not match"
+      }
+    },
+    "nameAndPassword" : {
+      "appBarTitle" : "Sign Up",
+      "title" : "Create\nyour username and password",
+      "desc" : "Your username is visible to others",
+      "nameInputHintText" : "Username",
+      "nameInputHelperMessage" : "Use letters,numbers,_ or .",
+      "canUseNameHelperMessage" : "Username is available",
+      "passwordInputHintText" : "Password",
+      "passwordInputHelperMessage" : "At least 8 characters, letters, numbers, symbols",
+      "confirmPasswordInputHintText" : "Confirm password",
+      "nextButtonText" : "Next",
+      "error" : {
+        "duplicateName" : "This username is already taken",
+        "invalidName" : "Only letters,numbers, _ or . allowed",
+        "exceedLimit" : "Username must be under 30 characters",
+        "mismatchPassword" : "Please re-enter your password"
+      }
+    },
+    "country" : {
+      "appBarTitle" : "Sign Up",
+      "title" : "Which country are you from?",
+      "desc" : "Country cannot be changed later",
+      "countryInputHintText" : "Search for your country",
+      "nextButtonText" : "Next"
+    },
+    "success" : {
+      "title" : "You’ve successfully signed up.",
+      "desc" : "Now you can find the real deal,\nverified by current students",
+      "buttonText" : "Find restaurants"
+    },
+    "studentIdCard" : {
+      "appBarTitle" : "Sign Up",
+      "title" : "Upload\nyour current student ID",
+      "desc" : "Only students can use this service",
+      "imageUploadLabel" : "Upload student ID image",
+      "imageUploadHintText" : "JPG or PNG,max 10MB",
+      "openCameraButtonText" : "Take a photo",
+      "nextButtonText" : "Next",
+      "error" : {
+        "exceedCapacity" : {
+          "title": "Image upload failed",
+          "desc" : "Only files in JPG or PNG format,\n10MB or less, are accepted",
+          "button" : "Okay"
+        }
       }
     }
   },
@@ -150,6 +152,56 @@
         "desc" : "Please log in with your new password",
         "signInButtonText" : "Login",
         "resetPasswordButtonText" : "Reset Password"
+      }
+    }
+  },
+  "feedUpload" : {
+    "selectMedia" : {
+      "appBarTitle" : "upload Feed",
+      "videoTabName" : "Video",
+      "photoTabName" : "Photo",
+      "nextButtonText" : "Next"
+    },
+    "post" : {
+      "appBarTitle" : "Upload Feed",
+      "titleInputLabel" : "Title",
+      "titleInputHintText" : "Enter your title",
+      "descInputLabel" : "Description",
+      "descInputHintText" : "Add a description of feed",
+      "placeLabel" : "Places",
+      "foodCategoryLabel" : "Food Category",
+      "tagLabel" : "Tag",
+      "uploadButtonText" : "Upload",
+      "tag" : {
+        "title" : "Tag",
+        "label" : "Enter Tag",
+        "addTagButtonText" : "Add",
+        "note" : "Multiple selection allowed",
+        "inputHintText" : "enter the tag you wish to register",
+        "uploadButtonText" : "Add"
+      },
+      "foodCategory": {
+        "title" : "Food Category",
+        "label" : "Type of Food",
+        "note" : "Multiple selection allowed",
+        "korean" : "Korean",
+        "western" : "Western",
+        "japanese" : "Japanese",
+        "chinese" : "Chinese",
+        "cafe" : "Cafe/Tea House",
+        "unique" : "Unique restaurant",
+        "uploadButtonText" : "Add"
+      },
+      "place" : {
+        "title" : "Places",
+        "label" : "Search",
+        "note" : "Multiple selection allowed",
+        "inputHintText" : "Search for a place to Add",
+        "uploadOnePlaceButtonText" : "Add",
+        "uploadAtLeastTwoPlaceButtonText" : "Add {} Places"
+      },
+      "success" : {
+        "toastMessage" : "The feed has been uploaded"
       }
     }
   }
