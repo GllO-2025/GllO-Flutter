@@ -204,5 +204,313 @@
         "toastMessage" : "피드가 업로드 되었습니다."
       }
     }
+  },
+  "collectionFeed" : {
+    "appBarTitle" : "컬렉션",
+    "empty" : {
+      "title" : "컬렉션이 없어요",
+      "desc" : "+버튼을 눌러 컬렉션을 만들어 보세요",
+      "collection" : {
+        "name" : "컬렉션1",
+        "title" : "저장된 게시물이 없습니다",
+        "desc" : "게시물을 저장해 컬렉션을 채워보세요"
+      }
+    },
+    "tab" : {
+      "feed" : "피드",
+      "place": "장소"
+    },
+    "edit" : {
+      "deleteButtonText" : "컬렉션 삭제",
+      "editButtonText" : "컬렉션 수정",
+      "selectButtonText" : "콘텐츠 선택",
+      "cancelButtonText" : "취소"
+    },
+    "delete" : {
+      "title" : "컬렉션을 삭제하시겠어요?",
+      "desc" : "해당 컬렉션에 저장된 사진과 동영상이 모두 삭제됩니다",
+      "deleteButtonText" : "컬렉션 삭제",
+      "cancelButtonText" : "취소"
+      "success" : {
+        "toastMessage" : "선택한 컬렉션이 삭제됐습니다",
+        "toastAction" : "실행 취소"
+      }
+    },
+    "modify" : {
+      "appBarTitle" : "컬렉션 수정",
+      "collectionName" : "컬렉션 이름",
+      "visibilityTitle" : "공개 설정",
+      "visibilityPrivateText" : "비공개",
+      "visibilityPublicText" : "공개",
+      "buttonText" : "변경 사항 적용",
+    },
+    "add" : {
+      "appBarTitle" : "컬렉션 추가",
+      "collectionName" : "컬렉션 이름",
+      "collectionNameHintText" : "컬렉션 이름을 입력하세요",
+      "visibilityTitle" : "공개 설정",
+      "visibilityPrivateText" : "비공개",
+      "visibilityPublicText" : "공개",
+      "buttonText" : "컬렉션 추가",
+    },
+    "contents" : {
+      "delete" : {
+        "cancelButtonText" : "취소",
+        "allSelectButtonText" : "모두선택",
+        "deleteButtonText" : "삭제",
+        "moveButtonText" : "다른 컬렉션으로",
+        "modal" : {
+          "title" : "이 콘텐츠를 삭제하시겠어요?",
+          "desc" : "삭제된 콘텐츠는 해당 컬렉션에만 적용됩니다",
+          "cancelButtonText" : "취소",
+          "deleteButtonText" : "콘텐츠 삭제"
+        },
+        "success" : {
+          "toastMessage" : "선택한 콘텐츠가 컬렉션에서 삭제됐습니다",
+          "toastAction" : "실행 취소"
+        }
+      },
+      "move" : {
+        "okButtonText" : "확인",
+        "success" : {
+          "toastMessage" : "선택한 콘텐츠를 다른 컬렉션으로 이동했습니다",
+          "toastAction" : "실행 취소"
+        }
+      }
+    }
+  },
+  "collectioPlace" : {
+    "appBarTitle" : "컬렉션",
+    "empty" : {
+      "title" : "컬렉션이 없어요",
+      "desc" : "+버튼을 눌러 컬렉션을 만들어 보세요",
+      "collection" : {
+        "name" : "컬렉션1",
+        "title" : "저장된 게시물이 없습니다",
+        "desc" : "게시물을 저장해 컬렉션을 채워보세요"
+      }
+    },
+    "tab" : {
+      "feed" : "피드",
+      "place": "장소"
+    },
+    "edit" : {
+      "deleteButtonText" : "컬렉션 삭제",
+      "editButtonText" : "컬렉션 수정",
+      "selectButtonText" : "장소 선택",
+      "cancelButtonText" : "취소"
+    },
+    "delete" : {
+      "title" : "컬렉션을 삭제하시겠어요?",
+      "desc" : "해당 컬렉션에 저장된 장소가 모두 삭제됩니다",
+      "deleteButtonText" : "컬렉션 삭제",
+      "cancelButtonText" : "취소"
+      "success" : {
+        "toastMessage" : "선택한 컬렉션이 삭제됐습니다",
+        "toastAction" : "실행 취소"
+      }
+    },
+    "modify" : {
+      "appBarTitle" : "컬렉션 수정",
+      "collectionName" : "컬렉션 이름",
+      "visibilityTitle" : "공개 설정",
+      "visibilityPrivateText" : "비공개",
+      "visibilityPublicText" : "공개",
+      "buttonText" : "변경 사항 적용",
+    },
+    "add" : {
+      "appBarTitle" : "컬렉션 추가",
+      "collectionName" : "컬렉션 이름",
+      "collectionNameHintText" : "컬렉션 이름을 입력하세요",
+      "visibilityTitle" : "공개 설정",
+      "visibilityPrivateText" : "비공개",
+      "visibilityPublicText" : "공개",
+      "buttonText" : "컬렉션 추가",
+    },
+    "contents" : {
+      "delete" : {
+        "cancelButtonText" : "취소",
+        "allSelectButtonText" : "모두선택",
+        "deleteButtonText" : "삭제",
+        "moveButtonText" : "다른 컬렉션으로",
+        "modal" : {
+          "title" : "이 장소를 삭제하시겠어요?",
+          "desc" : "삭제된 장소는 해당 컬렉션에만 적용됩니다",
+          "cancelButtonText" : "취소",
+          "deleteButtonText" : "장소 삭제"
+        },
+        "success" : {
+          "toastMessage" : "선택한 장소가 컬렉션에서 삭제됐습니다",
+          "toastAction" : "실행 취소"
+        }
+      },
+      "move" : {
+        "okButtonText" : "확인",
+        "success" : {
+          "toastMessage" : "선택한 장소를 다른 컬렉션으로 이동했습니다",
+          "toastAction" : "실행 취소"
+        }
+      }
+    }
+  },
+  "userProfile" : {
+    "appBarTitle" : "유저 프로필",
+    "userName" : "유저",
+    "profileMessage" : "유저 소개글 / 맛집 정보",
+    "verifyButtonText" : "학교인증 완료",
+    "postLabel" : "게시글",
+    "followerLabel" : "팔로워",
+    "followingLabel" : "팔로잉",
+    "editButtonText" : "프로필 수정",
+    "tab" : {
+      "place" : "장소",
+      "feed" : "피드"
+    },
+    "modal" : {
+      "blockButtonText" : "차단",
+      "unblockButtonText" : "차단 해제",
+      "reportButtonText" : "신고",
+      "cancelButtonText" : "취소"
+    },
+    "block" : {
+      "title" : "유저님을 차단하시겠어요?",
+      "desc" : "차단 후에는 상대방의 프로필 또는 콘텐츠를 찾을 수 없게 됩니다",
+      "blockButtonText" : "차단",
+      "cancelButtonText" : "취소",
+      "success" : {
+        "toastMessage" : "해당 유저를 차단했습니다"
+      }
+    },
+    "report" : {
+      "appBarTitle" : "신고하기",
+      "reason" : {
+        "title" : "신고 사유를 선택해주세요",
+        "option" : {
+          "spamOrPromotion" : "스팸 또는 광고성 콘텐츠",
+          "falseInfo" : "거짓 정보 포함",
+          "copyright" : "저작권 침해",
+          "other" : "기타"
+        },
+        "detailLabel" : "상세 내용 (선택)"
+      },
+      "reportButtonText" : "신고하기"
+      "success" : {
+        "toastMessage" : "해당 유저에 대한 신고를 완료했습니다"
+      }
+    }
+  },
+  "myPage" : {
+    "appBarTitle" : "내 프로필",
+    "userName" : "유저명",
+    "profileMessage" : "유저 소개글 / 맛집 정보",
+    "verifyButtonText" : "학교인증 완료",
+    "postLabel" : "게시글",
+    "followerLabel" : "팔로워",
+    "followingLabel" : "팔로잉",
+    "editButtonText" : "프로필 수정",
+    "tab" : {
+      "place" : "장소",
+      "feed" : "피드"
+    },
+    "follow" : {
+      "appBarTitle" : "팔로우 목록",
+      "followButtonText" : "팔로우",
+      "followingButtonText" : "팔로잉"
+      "tab" : {
+        "followerText" : "팔로워",
+        "followingText" : "팔로잉"
+      },
+    },
+    "profile" : {
+      "edit" : {
+        "appBarTitle" : "프로필 수정",
+        "cameraButtonText" : "이미지 변경",
+        "userName" : {
+          "title" : "사용자 이름 변경",
+          "hintText" : "사용자 이름",
+          "helpText" : "알파벳(대소문자), 숫자, 밑줄 및 마침표만 사용가능"
+        },
+        "introduce" : {
+          "title" : "소개글",
+          "hintText" : "소개글은 유저들에게 나를 알리는 기본적인 정보입니다",
+          "helpText" : "28글자 이내로 작성 가능"
+        },
+        "editButtonText" : "수정하기"
+      },
+      "setting" : {
+        "appBarTitle" : "프로필 설정",
+        "menu" : {
+          "myActivity" : "내 활동 조회",
+          "verificationStatus" : "인증 상태 조회",
+          "recoveryEmail" : "복구 이메일 등록",
+          "languageSetting" : "언어 설정",
+          "blockedAccount" : "차단된 계정",
+          "helpAndFeedback" : "문의 및 제안",
+          "logout" : "로그아웃",
+          "deleteAccount" : "탈퇴하기"
+        },
+        "myActivity" : {
+          "appBarTitle" : "내 프로필",
+          "likeText" : "좋아요",
+          "commentText" : "댓글"
+        },
+        "verificationStatus" : {
+          "appBarTitle" : "인증 상태 조회",
+          "emailVerificationText" : "학교 메일 인증",
+          "idVerificationText" : "학생증 인증",
+          "verifiedButtonText" : "인증 완료",
+          "verifyButtonText" : "인증 하기"
+        },
+        "recoveryEmail" : {
+          "appBarTitle" : "복구 이메일 등록",
+          "address" : {
+            "title" : "복구 이메일 주소",
+            "hintText" : "학교 이메일을 제외한 메일 주소를 입력해주세요",
+            "helpText" : "아이디 · 비밀번호 찾기를 위한 이메일 주소 입니다"
+          },
+          "error" : {
+            "nonSchoolEmail" : "학교 이메일을 제외한 메일 주소를 입력해주세요",
+            "invalidEmail" : "올바른 이메일 형식으로 다시 입력해주세요"
+          },
+          "buttonText" : "등록하기"
+        },
+        "languageSetting" : {
+          "appBartitle" : "언어 설정",
+          "english" : "English",
+          "korean" : "한국어",
+          "buttonText" : "언어 설정 적용"
+        },
+        "blockedAccount" : {
+          "appBarTitle" : "차단된 계정",
+          "unblockButtonText" : "차단 해제",
+          "modal" : {
+            "title" : "Username1님을 차단 해제",
+            "desc" : "이제 Username1님의 게시물을 볼 수 있습니다",
+            "unblockButtonText" : "차단 해제",
+            "cancelButtonText" : "취소"
+          }
+        },
+        "helpAndFeedback" : {
+          "appBarTitle" : "문의 및 제안",
+          "subtitle" : "문의하기",
+          "desc" : "서비스 이용 중 문의사항이나 개선 제안이 있으시면 아래 링크를 통해 연락해 주세요",
+          "buttonText" : "구글 폼으로 문의하기"
+        },
+        "logout" : {
+          "title" : "로그아웃",
+          "desc" : "정말 로그아웃 하시겠어요?",
+          "logoutButtonText" : "로그아웃",
+          "cancelButtonText" : "취소"
+        },
+        "deleteAccount" : {
+          "appBarTitle" : "탈퇴하기",
+          "subtitle" : "글로 계정 탈퇴",
+          "desc" : "계정을 탈퇴하시면 그동안 글로에 올려주신 게시물이 모두 삭제됩니다",
+          "reasonTitle" : "어떤 이유로 탈퇴하시는지 알려주시겠어요?",
+          "hintText" : "탈퇴하시려는 이유가 궁금해요",
+          "buttonText" : "탈퇴하기"
+        }
+      }
+    }
   }
 }
