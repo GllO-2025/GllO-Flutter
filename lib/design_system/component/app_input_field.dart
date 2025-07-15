@@ -1,26 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:gllo_flutter/app/asset/assets.gen.dart';
+import 'package:gllo_flutter/design_system/component/app_input_status.dart';
 import 'package:gllo_flutter/design_system/foundation/color/app_color.dart';
 import 'package:gllo_flutter/design_system/foundation/font/app_text_style.dart';
 import 'package:gllo_flutter/design_system/foundation/size/app_layout.dart';
 
-enum InputStatus { defaultStatus, success, error, disabled }
-
 class AppInputField extends StatefulWidget {
   const AppInputField({
     super.key,
-    required this.label,
     required this.controller,
     required this.placeholder,
     this.isPassword = false,
     this.isEnabled = true,
+    this.label,
     this.helpMessage,
     this.errorText,
     this.suffixIcon,
     this.onChanged,
   });
 
-  final String label;
+  final String? label;
   final TextEditingController controller;
   final String placeholder;
   final bool isPassword;
@@ -51,20 +50,20 @@ class _AppInputFieldState extends State<AppInputField> {
     super.dispose();
   }
 
-  InputStatus getStatus() {
-    if (!widget.isEnabled) return InputStatus.disabled;
-    if (widget.errorText != null) return InputStatus.error;
-    if (widget.controller.text.isNotEmpty) return InputStatus.success;
-    return InputStatus.defaultStatus;
+  AppInputStatus getStatus() {
+    if (!widget.isEnabled) return AppInputStatus.disabled;
+    if (widget.errorText != null) return AppInputStatus.error;
+    if (widget.controller.text.isNotEmpty) return AppInputStatus.success;
+    return AppInputStatus.defaultStatus;
   }
 
-  Color _getBorderColor(InputStatus status) {
+  Color _getBorderColor(AppInputStatus status) {
     switch (status) {
-      case InputStatus.disabled:
+      case AppInputStatus.disabled:
         return AppScaleColor.gray500;
-      case InputStatus.error:
+      case AppInputStatus.error:
         return AppScaleColor.red;
-      case InputStatus.success:
+      case AppInputStatus.success:
         return AppScaleColor.gray500;
       default:
         return AppScaleColor.gray50;
@@ -92,10 +91,10 @@ class _AppInputFieldState extends State<AppInputField> {
             horizontal: AppLayout.marginPaddingXs,
           ),
           child: Text(
-            widget.label,
+            widget.label ?? '',
             style: AppTextStyle.textMm.copyWith(
               color:
-                  status == InputStatus.error
+                  status == AppInputStatus.error
                       ? AppScaleColor.red
                       : AppScaleColor.gray800,
             ),
@@ -120,14 +119,14 @@ class _AppInputFieldState extends State<AppInputField> {
                 },
                 style: AppTextStyle.textMm.copyWith(
                   color:
-                      status == InputStatus.error
+                      status == AppInputStatus.error
                           ? AppScaleColor.red
                           : AppScaleColor.gray800,
                 ),
                 decoration: InputDecoration(
                   filled: true,
                   fillColor:
-                      status == InputStatus.disabled
+                      status == AppInputStatus.disabled
                           ? Colors.grey.shade100
                           : AppScaleColor.gray50,
                   hintText: widget.placeholder,
@@ -160,7 +159,7 @@ class _AppInputFieldState extends State<AppInputField> {
               widget.errorText ?? widget.helpMessage!,
               style: AppTextStyle.textSr.copyWith(
                 color:
-                    status == InputStatus.error
+                    status == AppInputStatus.error
                         ? AppScaleColor.red
                         : AppScaleColor.gray500,
               ),
@@ -170,7 +169,7 @@ class _AppInputFieldState extends State<AppInputField> {
     );
   }
 
-  Widget? _buildSuffixIcon(InputStatus status, bool isFocused) {
+  Widget? _buildSuffixIcon(AppInputStatus status, bool isFocused) {
     final hasText = widget.controller.text.isNotEmpty;
 
     if (widget.isPassword) {
@@ -200,7 +199,7 @@ class _AppInputFieldState extends State<AppInputField> {
       );
     }
 
-    if (status == InputStatus.success) {
+    if (status == AppInputStatus.success) {
       return Padding(
         padding: const EdgeInsets.all(AppLayout.marginPaddingS),
         child: Assets.icon.system.checkCircleFill.svg(

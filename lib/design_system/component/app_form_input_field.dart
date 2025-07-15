@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:gllo_flutter/app/asset/assets.gen.dart';
+import 'package:gllo_flutter/design_system/component/app_input_status.dart';
 import 'package:gllo_flutter/design_system/foundation/color/app_color.dart';
 import 'package:gllo_flutter/design_system/foundation/font/app_text_style.dart';
 import 'package:gllo_flutter/design_system/foundation/size/app_layout.dart';
-
-enum InputStatus { defaultStatus, success, error, disabled }
 
 class AppFormInputField extends FormField<String> {
   AppFormInputField({
     super.key,
     super.validator,
-    required this.label,
     required this.controller,
     required this.placeholder,
+    this.label,
     this.isPassword = false,
     this.isEnabled = true,
     this.helpMessage,
@@ -23,7 +22,7 @@ class AppFormInputField extends FormField<String> {
          enabled: isEnabled,
          builder: (field) {
            return _AppInputFieldInternal(
-             label: label,
+             label: label ?? '',
              controller: controller,
              placeholder: placeholder,
              isPassword: isPassword,
@@ -39,7 +38,7 @@ class AppFormInputField extends FormField<String> {
          },
        );
 
-  final String label;
+  final String? label;
   final TextEditingController controller;
   final String placeholder;
   final bool isPassword;
@@ -92,11 +91,11 @@ class _AppFormInputFieldInternalState extends State<_AppInputFieldInternal> {
     super.dispose();
   }
 
-  InputStatus getStatus() {
-    if (!widget.isEnabled) return InputStatus.disabled;
-    if (widget.errorText != null) return InputStatus.error;
-    if (widget.controller.text.isNotEmpty) return InputStatus.success;
-    return InputStatus.defaultStatus;
+  AppInputStatus getStatus() {
+    if (!widget.isEnabled) return AppInputStatus.disabled;
+    if (widget.errorText != null) return AppInputStatus.error;
+    if (widget.controller.text.isNotEmpty) return AppInputStatus.success;
+    return AppInputStatus.defaultStatus;
   }
 
   OutlineInputBorder border(Color color) => OutlineInputBorder(
@@ -104,13 +103,13 @@ class _AppFormInputFieldInternalState extends State<_AppInputFieldInternal> {
     borderSide: BorderSide(color: color, width: AppLayout.stroke15),
   );
 
-  Color getBorderColor(InputStatus status) {
+  Color getBorderColor(AppInputStatus status) {
     switch (status) {
-      case InputStatus.disabled:
+      case AppInputStatus.disabled:
         return AppScaleColor.gray500;
-      case InputStatus.error:
+      case AppInputStatus.error:
         return AppScaleColor.red;
-      case InputStatus.success:
+      case AppInputStatus.success:
         return AppScaleColor.gray500;
       default:
         return AppScaleColor.gray50;
@@ -120,8 +119,8 @@ class _AppFormInputFieldInternalState extends State<_AppInputFieldInternal> {
   @override
   Widget build(BuildContext context) {
     final status = getStatus();
-    final isError = status == InputStatus.error;
-    final isDisabled = status == InputStatus.disabled;
+    final isError = status == AppInputStatus.error;
+    final isDisabled = status == AppInputStatus.disabled;
     final hasText = widget.controller.text.isNotEmpty;
     final isFocused = _focusNode.hasFocus;
 
