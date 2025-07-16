@@ -86,20 +86,21 @@ class _AppInputFieldState extends State<AppInputField> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: AppLayout.marginPaddingXs,
-          ),
-          child: Text(
-            widget.label ?? '',
-            style: AppTextStyle.textMm.copyWith(
-              color:
-                  status == AppInputStatus.error
-                      ? AppScaleColor.red
-                      : AppScaleColor.gray800,
+        if (widget.label != null)
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: AppLayout.marginPaddingXs,
+            ),
+            child: Text(
+              widget.label ?? '',
+              style: AppTextStyle.textMm.copyWith(
+                color:
+                    status == AppInputStatus.error
+                        ? AppScaleColor.red
+                        : AppScaleColor.gray800,
+              ),
             ),
           ),
-        ),
         const SizedBox(height: AppLayout.marginPaddingXxs),
         SizedBox(
           height: 48,

@@ -22,7 +22,7 @@ class AppFormInputField extends FormField<String> {
          enabled: isEnabled,
          builder: (field) {
            return _AppInputFieldInternal(
-             label: label ?? '',
+             label: label,
              controller: controller,
              placeholder: placeholder,
              isPassword: isPassword,
@@ -49,18 +49,18 @@ class AppFormInputField extends FormField<String> {
 
 class _AppInputFieldInternal extends StatefulWidget {
   const _AppInputFieldInternal({
-    required this.label,
     required this.controller,
     required this.placeholder,
     required this.isPassword,
     required this.isEnabled,
     required this.onChanged,
     required this.errorText,
+    this.label,
     this.helpMessage,
     this.suffixIcon,
   });
 
-  final String label;
+  final String? label;
   final TextEditingController controller;
   final String placeholder;
   final bool isPassword;
@@ -132,17 +132,18 @@ class _AppFormInputFieldInternalState extends State<_AppInputFieldInternal> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: AppLayout.marginPaddingXs,
-          ),
-          child: Text(
-            widget.label,
-            style: AppTextStyle.textMm.copyWith(
-              color: isError ? AppScaleColor.red : AppScaleColor.gray800,
+        if (widget.label != null)
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: AppLayout.marginPaddingXs,
+            ),
+            child: Text(
+              widget.label ?? '',
+              style: AppTextStyle.textMm.copyWith(
+                color: isError ? AppScaleColor.red : AppScaleColor.gray800,
+              ),
             ),
           ),
-        ),
         const SizedBox(height: AppLayout.marginPaddingXxs),
         SizedBox(
           height: 48,
