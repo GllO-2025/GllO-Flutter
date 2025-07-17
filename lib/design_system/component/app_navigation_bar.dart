@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:gllo_flutter/app/asset/assets.gen.dart';
+import 'package:gllo_flutter/app/localization/locale_keys.g.dart';
 import 'package:gllo_flutter/app/router/routes.dart';
 import 'package:gllo_flutter/design_system/foundation/color/app_color.dart';
 import 'package:gllo_flutter/design_system/foundation/font/app_text_style.dart';
@@ -28,28 +30,28 @@ class AppNavigationBarType {
 abstract final class AppNavigationBarItem {
   AppNavigationBarItem._();
   static AppNavigationBarType home = AppNavigationBarType(
-    label: 'Home',
+    label: LocaleKeys.gnb_home,
     routeName: Routes.home.name,
     selectedIcon: Assets.icon.etc.home3Fill,
     unselectedIcon: Assets.icon.etc.home3Line,
   );
 
   static AppNavigationBarType map = AppNavigationBarType(
-    label: 'Map',
+    label: LocaleKeys.gnb_map,
     routeName: Routes.map.name,
     selectedIcon: Assets.icon.etc.mapFill,
     unselectedIcon: Assets.icon.etc.mapLine,
   );
 
   static AppNavigationBarType collect = AppNavigationBarType(
-    label: 'Collect',
+    label: LocaleKeys.gnb_collection,
     routeName: Routes.collect.name,
     selectedIcon: Assets.icon.etc.box2Fill,
     unselectedIcon: Assets.icon.etc.box2Line,
   );
 
   static AppNavigationBarType user = AppNavigationBarType(
-    label: 'User',
+    label: LocaleKeys.gnb_myGllo,
     routeName: Routes.user.name,
     selectedIcon: Assets.icon.etc.user2Fill,
     unselectedIcon: Assets.icon.etc.user2Line,
@@ -155,7 +157,7 @@ class _NavBarItem extends StatelessWidget {
             children: [
               icon.svg(colorFilter: ColorFilter.mode(color, BlendMode.srcIn)),
               Text(
-                item.label,
+                context.tr(item.label),
                 style: AppTextStyle.textSr.copyWith(color: color),
               ),
             ],
