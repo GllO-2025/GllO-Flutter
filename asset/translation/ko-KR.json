@@ -512,5 +512,150 @@
         }
       }
     }
+  },
+  "home" : {
+    "regionDropdown" : {
+      "all" : "전국",
+      "smwu" : "숙명여대",
+      "kku" : "건국대 (예정)"
+    },
+    "newFeed" : {
+      "title" : "이번주 신규 콘텐츠",
+      "desc" : "매주 금요일마다 업데이트돼요"
+    },
+    "top10" : {
+      "title" : "재학생 픽 맛집 TOP 10"
+    },
+    "search" : {
+      "inputHintText" : "장소명, 메뉴명 검색",
+      "recentSearchText" : "최근검색어",
+      "tab" : {
+        "feed" : "피드",
+        "place" : "장소"
+      }
+    }
+  },
+  "feedDetail" : {
+    "placeButtonText" : "{}개 장소보기",
+    "followingButtonText" : "팔로잉",
+    "followButtonText" : "팔로우",
+    "followerNumber" : "팔로워 {}명",
+    "viewPlace" : {
+      "title" : "소개된 맛집",
+      "bookmarkText" : "저장",
+      "bookmarkedText" : "저장됨",
+      "detailText" : "상세보기"
+    },
+    "bookmark" : {
+      "feedTitle" : "영상 컬렉션에 저장",
+      "feedSubTitle" : "영상 컬렉션",
+      "placeTitle" : "장소 컬렉션에 저장",
+      "placeSubTitle" : "장소 컬렉션",
+      "addCollectionText" : "새로 만들기",
+      "save" : "저장하기",
+      "collectionItem" : {
+        "visibilityPublicText" : "공개",
+        "visibilityPrivateText" : "비공개",
+        "postNumberText" : "{}개 게시물/장소"
+      },
+      "empty" : {
+        "title" : "저장된 컬렉션이 없습니다",
+        "desc" : "새 컬렉션을 만들어 콘텐츠를 정리해보세요"
+      }
+    },
+    "report" : {
+      "title" : "신고하기",
+      "subTitle" : "신고 사유를 선택해주세요",
+      "reason" : {
+        "spamOrPromotion" : "스팸 또는 광고성 콘텐츠",
+        "falseInfo" : "거짓 정보 포함",
+        "inappropriate" : "부적절한 콘텐츠",
+        "copyright" : "저작권 침해",
+        "other" : "기타",
+        "detail" : {
+          "inputLabelText" : "상세 내용 (선택)",
+          "inputHintText" : "신고 사유에 대해 자세히 설명해주세요"
+        }
+      },
+      "buttonText" : "신고하기",
+      "success" : {
+        "toastMessage" : "신고 접수가 완료되었습니다"
+      }
+    },
+    "addCollection" : {
+      "title" : "새 컬렉션 만들기",
+      "collectionName" : "컬렉션 이름",
+      "collectionNameHintText" : "컬렉션 이름을 입력하세요",
+      "visibilityTitle" : "공개 설정",
+      "visibilityPrivateText" : "비공개",
+      "visibilityPublicText" : "공개",
+      "buttonText" : "컬렉션 추가",
+      "success" : {
+        "toastMessage" : "컬렉션이 저장되었습니다"
+      }
+    },
+    "comment" : {
+      "title" : "댓글",
+      "inputHintText" : "댓글 추가",
+      "empty" : {
+        "title" : "아직 댓글이 없어요",
+        "desc" : "첫 댓글로 이야기를 시작해보세요"
+      },
+      "loading" : {
+        "title" : "댓글 불러오는중..",
+        "desc" : "잠시만 기다려주세요"
+      },
+      "reportText" : "신고",
+      "blockText" : "차단"
+    }
+  },
+  "placeDetail" : {
+    "shareButtonText" : "공유",
+    "saveButtonText" : "저장",
+    "directionButtonText" : "길찾기",
+    "tab" : {
+      "details" : {
+        "text" : "상세정보",
+        "hourText" : "영업시간",
+        "contactText" : "전화번호",
+        "closedText" : "쉬는날",
+        "signatureMenuText" : "대표메뉴",
+        "highlightMenuText" : "취급메뉴"
+      },
+      "feeds" : {
+        "text" : "리뷰영상",
+        "direction" : {
+          "title" : "카카오맵 열기",
+          "desc" : "길찾기 서비스는 카카오맵으로\n연결됩니다",
+          "cancelText" : "아니요",
+          "openText" : "열기"
+        }
+      }
+    }
+  },
+  "gnb" : {
+    "home" : "홈",
+    "map" : "지도",
+    "collection" : "컬렉션",
+    "myGllo" : "마이글로"
+  },
+  "loading" : {
+    "text" : "재학생이 추천한 음식점을 방문해보세요"
+  },
+  "map" : {
+    "filter" : {
+      "korean" : "한식",
+      "western" : "양식",
+      "japanese" : "일식",
+      "chinese" : "중식",
+      "vegan" : "비건",
+      "halal" : "할랄",
+      "withVideo" : "영상있음"
+    },
+    "search" : {
+      "inputHintText" : "장소명,메뉴명 검색",
+      "recentSearchText" : "최근검색어"
+    },
+    "searchThisAreaText" : "현지도 재검색"
   }
 }

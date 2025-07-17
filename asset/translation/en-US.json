@@ -512,5 +512,150 @@
         }
       }
     }
+  },
+  "home" : {
+    "regionDropdown" : {
+      "all" : "All regions",
+      "smwu" : "SMWU",
+      "kku" : "KKU (Coming soon)"
+    },
+    "newFeed" : {
+      "title" : "New this week",
+      "desc" : "Updated every Friday"
+    },
+    "top10" : {
+      "title" : "Student Picks: Top 10 Restaurants"
+    },
+    "search" : {
+      "inputHintText" : "Search places or menu",
+      "recentSearchText" : "Recent Searches",
+      "tab" : {
+        "feed" : "Feed",
+        "place" : "Places"
+      }
+    }
+  },
+  "feedDetail" : {
+    "placeButtonText" : "View {} Places",
+    "followingButtonText" : "Following",
+    "followButtonText" : "Follow",
+    "followerNumber" : "Follower {}",
+    "viewPlace" : {
+      "title" : "Places in this post",
+      "bookmarkText" : "Add",
+      "bookmarkedText" : "Added",
+      "detailText" : "Details"
+    },
+    "bookmark" : {
+      "feedTitle" : "Save to Feed collection",
+      "feedSubTitle" : "Feed collections",
+      "placeTitle" : "Save to place collection",
+      "placeSubTitle" : "Place collections",
+      "addCollectionText" : "New",
+      "save" : "Save",
+      "collectionItem" : {
+        "visibilityPublicText" : "Public",
+        "visibilityPrivateText" : "Private",
+        "postNumberText" : "{} posts/places"
+      },
+      "empty" : {
+        "title" : "No collections created",
+        "desc" : "Create a new collection to organize your contents"
+      }
+    },
+    "report" : {
+      "title" : "Report",
+      "subTitle" : "Select a reason",
+      "reason" : {
+        "spamOrPromotion" : "Spam or promotional content",
+        "falseInfo" : "False information",
+        "inappropriate" : "Inappropriate content",
+        "copyright" : "Copyright infringement",
+        "other" : "Others",
+        "detail" : {
+          "inputLabelText" : "Details (optional)",
+          "inputHintText" : "Please describe your reason in detail"
+        }
+      },
+      "buttonText" : "Report",
+      "success" : {
+        "toastMessage" : "The report has been successfully submitted"
+      }
+    },
+    "addCollection" : {
+      "title" : "Create new collection",
+      "collectionName" : "Collection name",
+      "collectionNameHintText" : "Enter a collection name",
+      "visibilityTitle" : "Privacy settings",
+      "visibilityPrivateText" : "Private",
+      "visibilityPublicText" : "Public",
+      "buttonText" : "Save",
+      "success" : {
+        "toastMessage" : "Collection saved"
+      }
+    },
+    "comment" : {
+      "title" : "Comments",
+      "inputHintText" : "Add a comment",
+      "empty" : {
+        "title" : "No comments yet",
+        "desc" : "Be the first to comment"
+      },
+      "loading" : {
+        "title" : "Loading comments...",
+        "desc" : "Please wait a moment"
+      },
+      "reportText" : "Report",
+      "blockText" : "Block"
+    }
+  },
+  "placeDetail" : {
+    "shareButtonText" : "Share",
+    "saveButtonText" : "Add",
+    "directionButtonText" : "Directions",
+    "tab" : {
+      "details" : {
+        "text" : "Details",
+        "hourText" : "Hours",
+        "contactText" : "Contact",
+        "closedText" : "Closed on",
+        "signatureMenuText" : "Signature Menu",
+        "highlightMenuText" : "Menu Highlights"
+      },
+      "feeds" : {
+        "text" : "Review Video",
+        "direction" : {
+          "title" : "Open KakaoMap",
+          "desc" : "Directions will open in KakaoMap",
+          "cancelText" : "Cancel",
+          "openText" : "Open"
+        }
+      }
+    }
+  },
+  "gnb" : {
+    "home" : "Home",
+    "map" : "Map",
+    "collection" : "Collection",
+    "myGllo" : "My GIIO"
+  },
+  "loading" : {
+    "text" : "Try out the restaurants recommended by students"
+  },
+  "map" : {
+    "filter" : {
+      "korean" : "Korean",
+      "western" : "Western",
+      "japanese" : "Japanese",
+      "chinese" : "Chinese",
+      "vegan" : "Vegan",
+      "halal" : "Halal",
+      "withVideo" : "With video"
+    },
+    "search" : {
+      "inputHintText" : "Search places or menu",
+      "recentSearchText" : "Recent Searches"
+    },
+    "searchThisAreaText" : "Search this area"
   }
 }
