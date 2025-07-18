@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gllo_flutter/app/asset/assets.gen.dart';
 import 'package:gllo_flutter/app/localization/locale_keys.g.dart';
 import 'package:gllo_flutter/app/router/routes.dart';
@@ -7,18 +8,19 @@ import 'package:gllo_flutter/design_system/component/app_button.dart';
 import 'package:gllo_flutter/design_system/component/app_page_indicator.dart';
 import 'package:gllo_flutter/design_system/foundation/color/app_color.dart';
 import 'package:gllo_flutter/design_system/foundation/font/app_text_style.dart';
+import 'package:gllo_flutter/presentation/controller/onboarding/onboarding_controller.dart';
 import 'package:go_router/go_router.dart';
 
 part 'local_widget/onboarding_step.dart';
 
-class OnboardingView extends StatefulWidget {
+class OnboardingView extends ConsumerStatefulWidget {
   const OnboardingView({super.key});
 
   @override
-  State<OnboardingView> createState() => _OnboardingViewState();
+  ConsumerState<OnboardingView> createState() => _OnboardingViewState();
 }
 
-class _OnboardingViewState extends State<OnboardingView> {
+class _OnboardingViewState extends ConsumerState<OnboardingView> {
   late final PageController _pageController;
   int _currentPage = 0;
   final List<_OnboardingStep> _steps = [
@@ -80,11 +82,16 @@ class _OnboardingViewState extends State<OnboardingView> {
                     width: double.infinity,
                     child: AppButton(
                       label: LocaleKeys.onboarding_nextButton.tr(),
-                      onPressed: () {
+                      onPressed: () async {
                         if (_currentPage >= _steps.length - 1) {
-                          context.goNamed(Routes.home.name);
+                          await ref
+                              .read(onboardingControllerProvider.notifier)
+                              .completeOnboarding();
+                          if (context.mounted) {
+                            context.goNamed(Routes.home.name);
+                          }
                         } else {
-                          _pageController.nextPage(
+                          await _pageController.nextPage(
                             duration: const Duration(milliseconds: 300),
                             curve: Curves.easeIn,
                           );
