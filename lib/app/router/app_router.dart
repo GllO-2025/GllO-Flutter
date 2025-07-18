@@ -4,6 +4,7 @@ import 'package:gllo_flutter/app/router/routes.dart';
 import 'package:gllo_flutter/presentation/view/collect/collect_view.dart';
 import 'package:gllo_flutter/presentation/view/home/home_view.dart';
 import 'package:gllo_flutter/presentation/view/map/map_view.dart';
+import 'package:gllo_flutter/presentation/view/onboarding/onboarding_view.dart';
 import 'package:gllo_flutter/presentation/view/onboarding/splash_view.dart';
 import 'package:gllo_flutter/presentation/view/sample/sample_view.dart';
 import 'package:gllo_flutter/presentation/view/user/user_view.dart';
@@ -24,7 +25,7 @@ class AppRouter {
       GlobalKey<NavigatorState>();
 
   late final GoRouter routerConfig = GoRouter(
-    initialLocation: Routes.splash.name,
+    initialLocation: Routes.onboarding.name,
     navigatorKey: rootNavigatorKey,
     routes: [
       /// 샘플 화면
@@ -39,6 +40,13 @@ class AppRouter {
         path: Routes.splash.path,
         name: Routes.splash.name,
         builder: (context, state) => const SplashView(),
+      ),
+
+      /// 온보딩 프로세스
+      GoRoute(
+        path: Routes.onboarding.path,
+        name: Routes.onboarding.name,
+        builder: (context, state) => const OnboardingView(),
       ),
 
       /// 홈
