@@ -1,22 +1,26 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+part 'generated/error_model.g.dart';
+
 /// Http Error Response 객체
+@JsonSerializable()
 class ErrorModel {
-  const ErrorModel({
-    required this.statusCode,
-    required this.errorCode,
-    required this.message,
+  factory ErrorModel.fromJson(Map<String, dynamic> json) =>
+      _$ErrorModelFromJson(json);
+  ErrorModel({
+    required this.status,
+    this.errorMessage = const ErrorModelMessage(),
   });
 
-  factory ErrorModel.fromJson(Map<String, dynamic> json) {
-    return ErrorModel(
-      statusCode: json['statusCode'],
-      errorCode: json['errorCode'],
-      message:
-          json['message'] is List<String>
-              ? json['message'][0]
-              : json['message'],
-    );
-  }
-  final int statusCode;
-  final int errorCode;
+  final String status;
+  final ErrorModelMessage errorMessage;
+}
+
+@JsonSerializable()
+class ErrorModelMessage {
+  factory ErrorModelMessage.fromJson(Map<String, dynamic> json) =>
+      _$ErrorModelMessageFromJson(json);
+
+  const ErrorModelMessage({this.message = ''});
   final String message;
 }

@@ -7,18 +7,31 @@ part 'generated/custom_exception.freezed.dart';
 /// 에러를 명시적으로 다루기 위함
 @freezed
 class CustomException with _$CustomException implements Exception {
-  const factory CustomException.unauthorized({required ErrorModel model}) =
-      Unauthorized;
-  const factory CustomException.userNotFound({required ErrorModel model}) =
-      UserNotFound;
-  const factory CustomException.tokenExpired({required ErrorModel model}) =
-      TokenExpired;
-  const factory CustomException.productNotFound({required ErrorModel model}) =
-      ProductNotFound;
-  const factory CustomException.missingRequiredValue({
+  const factory CustomException.notFound({required ErrorModel model}) =
+      NotFound;
+  const factory CustomException.maxTryExceeded({required ErrorModel model}) =
+      MaxTryExceeded;
+  const factory CustomException.nicknameReadFail({required ErrorModel model}) =
+      NicknameReadFail;
+  const factory CustomException.nicknameAlreadyExist({
     required ErrorModel model,
-  }) = MissingRequiredValue;
-  const factory CustomException.invalid({required ErrorModel model}) = Invalid;
+  }) = NicknameAlreadyExist;
+  const factory CustomException.invalidToken({required ErrorModel model}) =
+      InvalidToken;
+  const factory CustomException.expiredAccessToken({
+    required ErrorModel model,
+  }) = ExpiredAccessToken;
+  const factory CustomException.expiredRefreshToken({
+    required ErrorModel model,
+  }) = ExpiredRefreshToken;
+  const factory CustomException.invalidPassword({required ErrorModel model}) =
+      InvalidPassword;
+  const factory CustomException.duplicatedMember({required ErrorModel model}) =
+      DuplicatedMember;
+  const factory CustomException.googleLoginError({required ErrorModel model}) =
+      GoogleLoginIntervalServerError;
+  const factory CustomException.refreshReuse({required ErrorModel model}) =
+      RefreshReuseException;
 
   // 임의로 정의한 에러 코드들
   /// {
