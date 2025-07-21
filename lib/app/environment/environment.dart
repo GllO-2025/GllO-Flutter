@@ -1,5 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:gllo_flutter/app/environment/environment_type.dart';
+import 'package:gllo_flutter/app/environment/firebase_options.dart';
 
 /// 앱의 실핼 환경 설정 및 초기화
 class Environment {
@@ -26,6 +28,11 @@ class Environment {
     if (!_isInitialized) {
       return;
     }
+
+    // Firebase 초기화
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
 
     // EasyLocalization 초기화
     await EasyLocalization.ensureInitialized();

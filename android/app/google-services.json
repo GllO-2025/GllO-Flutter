@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "748017000871",
+    "project_id": "gllo-960a2",
+    "storage_bucket": "gllo-960a2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748017000871:android:51a22f8d178ec3d5df5682",
+        "android_client_info": {
+          "package_name": "com.gllo.gllo_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8fuAk-n4UhvIG7MtwZzVmQ9u-SEj1Ef4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
