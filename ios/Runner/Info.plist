@@ -27,6 +27,16 @@
         <string>en_US</string>
         <string>ko_KR</string>
     </array>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <!-- google login -->
+        <string>com.googleusercontent.apps.748017000871-sibtn9mk3cv1aj220udn5hoqsjulacb2</string>
+      </array>
+      </dict>
+    </array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
