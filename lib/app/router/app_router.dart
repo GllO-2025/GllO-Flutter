@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gllo_flutter/app/router/routes.dart';
+import 'package:gllo_flutter/presentation/view/auth/start_sign_up_view.dart';
 import 'package:gllo_flutter/presentation/view/collect/collect_view.dart';
 import 'package:gllo_flutter/presentation/view/home/home_view.dart';
 import 'package:gllo_flutter/presentation/view/map/map_view.dart';
@@ -23,9 +24,29 @@ class AppRouter {
       GlobalKey<NavigatorState>();
 
   late final GoRouter routerConfig = GoRouter(
-    initialLocation: Routes.home.name,
+    initialLocation: Routes.startSignUp.name,
     navigatorKey: rootNavigatorKey,
     routes: [
+      GoRoute(
+        path: Routes.auth.path,
+        name: Routes.auth.name,
+        redirect: (context, state) {
+          /// [/auth] 로 이동하려 한다면 [/auth/start_sign_up] (로그인/회원가입 선택 페이지)로 강제 리다이렉트
+          if (state.fullPath == Routes.startSignUp.name) {
+            return Routes.startSignUp.name;
+          }
+
+          return null;
+        },
+        routes: [
+          GoRoute(
+            path: Routes.startSignUp.path,
+            name: Routes.startSignUp.name,
+            builder: (context, state) => const StartSignUpView(),
+          ),
+        ],
+      ),
+
       /// 샘플 화면
       GoRoute(
         path: Routes.sample.path,

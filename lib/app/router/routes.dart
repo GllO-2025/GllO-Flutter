@@ -12,6 +12,15 @@ abstract class Routes {
   /// 홈
   static final RouteInfo home = const RouteInfo(name: '/home', path: '/home');
 
+  /// 인증/인가 관련 라우팅 경로 접두사
+  static final RouteInfo auth = const RouteInfo(name: '/auth', path: '/auth');
+
+  /// 로그인/회원가입 선택 페이지
+  static final RouteInfo startSignUp = RouteInfo(
+    name: '${auth.name}/start_sign_up',
+    path: 'start_sign_up',
+  );
+
   /// 맵
   static final RouteInfo map = const RouteInfo(name: '/map', path: '/map');
 
