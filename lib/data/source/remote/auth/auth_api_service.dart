@@ -4,6 +4,7 @@ import 'package:gllo_flutter/app/di/config.dart';
 import 'package:gllo_flutter/data/entity/auth/oauth_sign_in_entity.dart';
 import 'package:gllo_flutter/data/request_body/auth/sign_in_with_apple_request_body.dart';
 import 'package:gllo_flutter/data/request_body/auth/sign_in_with_google_request_body.dart';
+import 'package:retrofit/error_logger.dart';
 import 'package:retrofit/http.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
