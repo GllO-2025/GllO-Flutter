@@ -6,6 +6,8 @@ import 'package:gllo_flutter/data/source/remote/auth/auth_api_service.dart';
 import 'package:gllo_flutter/data/source/remote/auth/auth_remote_data_source.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+part 'generated/auth_remote_data_source_impl.g.dart';
+
 @Riverpod(keepAlive: true)
 AuthRemoteDataSource authRemoteDataSource(Ref ref) {
   return AuthRemoteDataSourceImpl(apiService: ref.read(authApiServiceProvider));
