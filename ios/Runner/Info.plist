@@ -33,7 +33,7 @@
       <key>CFBundleURLSchemes</key>
       <array>
         <!-- google login -->
-        <string>com.googleusercontent.apps.748017000871-7l2256anc7qucbgostclhkvs9pbbqtt0</string>
+        <string>com.googleusercontent.apps.748017000871-qut87krjdoo0ilhs5cp8sucja3rlqs77</string>
       </array>
       </dict>
     </array>
@@ -82,6 +82,6 @@
     <key>ITSAppUsesNonExemptEncryption</key>
     <false/>
     <key>GIDClientID</key>
-    <string>748017000871-7l2256anc7qucbgostclhkvs9pbbqtt0.apps.googleusercontent.com</string>
+    <string>748017000871-qut87krjdoo0ilhs5cp8sucja3rlqs77.apps.googleusercontent.com</string>
 </dict>
 </plist>

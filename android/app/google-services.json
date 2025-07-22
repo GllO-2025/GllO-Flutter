@@ -14,7 +14,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "748017000871-dei3dcjude19o5h0p84ndi7al7aaf3ke.apps.googleusercontent.com",
+          "client_id": "748017000871-htkg6mk0c15r7jk8cj650hfh3m84aaoo.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.gllo.gllo_flutter",
@@ -39,7 +39,7 @@
               "client_type": 3
             },
             {
-              "client_id": "748017000871-7l2256anc7qucbgostclhkvs9pbbqtt0.apps.googleusercontent.com",
+              "client_id": "748017000871-qut87krjdoo0ilhs5cp8sucja3rlqs77.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
                 "bundle_id": "com.gllo.glloFlutter"
