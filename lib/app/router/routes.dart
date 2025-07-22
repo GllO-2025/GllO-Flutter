@@ -9,6 +9,15 @@ abstract class Routes {
     path: '/sample',
   );
 
+  /// 스플래시
+  static const RouteInfo splash = RouteInfo(name: '/splash', path: '/splash');
+
+  /// 온보딩 프로세스
+  static const RouteInfo onboarding = RouteInfo(
+    name: '/onboarding',
+    path: '/onboarding',
+  );
+
   /// 홈
   static final RouteInfo home = const RouteInfo(name: '/home', path: '/home');
 
