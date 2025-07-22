@@ -7,7 +7,7 @@ part of '../error_model.dart';
 // **************************************************************************
 
 ErrorModel _$ErrorModelFromJson(Map<String, dynamic> json) => ErrorModel(
-  status: json['status'] as String,
+  status: json['status'] as String? ?? '',
   errorMessage:
       json['errorMessage'] == null
           ? const ErrorModelMessage()
