@@ -80,6 +80,18 @@ class $AssetIconGen {
 class $AssetPngGen {
   const $AssetPngGen();
 
+  /// File path: asset/png/app_logo_primary.png
+  AssetGenImage get appLogoPrimary =>
+      const AssetGenImage('asset/png/app_logo_primary.png');
+
+  /// File path: asset/png/apple_logo.png
+  AssetGenImage get appleLogo =>
+      const AssetGenImage('asset/png/apple_logo.png');
+
+  /// File path: asset/png/google_logo.png
+  AssetGenImage get googleLogo =>
+      const AssetGenImage('asset/png/google_logo.png');
+
   /// File path: asset/png/konkuk_logo.png
   AssetGenImage get konkukLogo =>
       const AssetGenImage('asset/png/konkuk_logo.png');
@@ -89,7 +101,13 @@ class $AssetPngGen {
       const AssetGenImage('asset/png/sookmyung_logo.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [konkukLogo, sookmyungLogo];
+  List<AssetGenImage> get values => [
+    appLogoPrimary,
+    appleLogo,
+    googleLogo,
+    konkukLogo,
+    sookmyungLogo,
+  ];
 }
 
 class $AssetTranslationGen {

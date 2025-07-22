@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 
 import 'package:gllo_flutter/core/error_handling/custom_exception.dart';
 import 'package:gllo_flutter/core/error_handling/error_model.dart';
+import 'package:gllo_flutter/core/error_handling/error_status.dart';
 import 'package:gllo_flutter/core/error_handling/result.dart';
 
 /// 과업을 실행시키고, 과업의 성공 혹은 실패 상태를 반환
@@ -21,23 +22,40 @@ Future<Result<T, CustomException>> apiCall<T>({
     var errorModel = ErrorModel.fromJson(e.response!.data);
 
     /// 에러코드를 통해 커스텀 에러 구분
-    return switch (errorModel.errorCode) {
-      4000 => Failure(
-        exception: CustomException.unauthorized(model: errorModel),
+    return switch (errorModel.status) {
+      ErrorStatus.notFound => Failure(
+        exception: CustomException.notFound(model: errorModel),
       ),
-      4001 => Failure(
-        exception: CustomException.userNotFound(model: errorModel),
+      ErrorStatus.maxTryExceeded => Failure(
+        exception: CustomException.maxTryExceeded(model: errorModel),
       ),
-      4002 => Failure(
-        exception: CustomException.tokenExpired(model: errorModel),
+      ErrorStatus.nicknameReadFail => Failure(
+        exception: CustomException.nicknameReadFail(model: errorModel),
       ),
-      4003 => Failure(
-        exception: CustomException.productNotFound(model: errorModel),
+      ErrorStatus.nicknameAlreadyExist => Failure(
+        exception: CustomException.nicknameAlreadyExist(model: errorModel),
       ),
-      4004 => Failure(
-        exception: CustomException.missingRequiredValue(model: errorModel),
+      ErrorStatus.invalidToken => Failure(
+        exception: CustomException.invalidToken(model: errorModel),
       ),
-      4005 => Failure(exception: CustomException.invalid(model: errorModel)),
+      ErrorStatus.expiredAccessToken => Failure(
+        exception: CustomException.expiredAccessToken(model: errorModel),
+      ),
+      ErrorStatus.expiredRefreshToken => Failure(
+        exception: CustomException.expiredRefreshToken(model: errorModel),
+      ),
+      ErrorStatus.invalidPassword => Failure(
+        exception: CustomException.invalidPassword(model: errorModel),
+      ),
+      ErrorStatus.duplicatedMember => Failure(
+        exception: CustomException.duplicatedMember(model: errorModel),
+      ),
+      ErrorStatus.googleLoginError => Failure(
+        exception: CustomException.googleLoginError(model: errorModel),
+      ),
+      ErrorStatus.refreshReuse => Failure(
+        exception: CustomException.refreshReuse(model: errorModel),
+      ),
       _ => const Failure(exception: CustomException.networkError()),
     };
   } catch (e) {

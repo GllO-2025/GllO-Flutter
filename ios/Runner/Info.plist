@@ -27,6 +27,16 @@
         <string>en_US</string>
         <string>ko_KR</string>
     </array>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <!-- google login -->
+        <string>com.googleusercontent.apps.748017000871-qut87krjdoo0ilhs5cp8sucja3rlqs77</string>
+      </array>
+      </dict>
+    </array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
@@ -71,5 +81,7 @@
     </array>
     <key>ITSAppUsesNonExemptEncryption</key>
     <false/>
+    <key>GIDClientID</key>
+    <string>748017000871-qut87krjdoo0ilhs5cp8sucja3rlqs77.apps.googleusercontent.com</string>
 </dict>
 </plist>

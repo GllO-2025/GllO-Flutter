@@ -45,8 +45,8 @@ $CustomExceptionCopyWith(CustomException _, $Res Function(CustomException) __);
 /// @nodoc
 
 
-class Unauthorized implements CustomException {
-  const Unauthorized({required this.model});
+class NotFound implements CustomException {
+  const NotFound({required this.model});
   
 
  final  ErrorModel model;
@@ -55,13 +55,13 @@ class Unauthorized implements CustomException {
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-$UnauthorizedCopyWith<Unauthorized> get copyWith => _$UnauthorizedCopyWithImpl<Unauthorized>(this, _$identity);
+$NotFoundCopyWith<NotFound> get copyWith => _$NotFoundCopyWithImpl<NotFound>(this, _$identity);
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Unauthorized&&(identical(other.model, model) || other.model == model));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NotFound&&(identical(other.model, model) || other.model == model));
 }
 
 
@@ -70,15 +70,15 @@ int get hashCode => Object.hash(runtimeType,model);
 
 @override
 String toString() {
-  return 'CustomException.unauthorized(model: $model)';
+  return 'CustomException.notFound(model: $model)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class $UnauthorizedCopyWith<$Res> implements $CustomExceptionCopyWith<$Res> {
-  factory $UnauthorizedCopyWith(Unauthorized value, $Res Function(Unauthorized) _then) = _$UnauthorizedCopyWithImpl;
+abstract mixin class $NotFoundCopyWith<$Res> implements $CustomExceptionCopyWith<$Res> {
+  factory $NotFoundCopyWith(NotFound value, $Res Function(NotFound) _then) = _$NotFoundCopyWithImpl;
 @useResult
 $Res call({
  ErrorModel model
@@ -89,17 +89,17 @@ $Res call({
 
 }
 /// @nodoc
-class _$UnauthorizedCopyWithImpl<$Res>
-    implements $UnauthorizedCopyWith<$Res> {
-  _$UnauthorizedCopyWithImpl(this._self, this._then);
+class _$NotFoundCopyWithImpl<$Res>
+    implements $NotFoundCopyWith<$Res> {
+  _$NotFoundCopyWithImpl(this._self, this._then);
 
-  final Unauthorized _self;
-  final $Res Function(Unauthorized) _then;
+  final NotFound _self;
+  final $Res Function(NotFound) _then;
 
 /// Create a copy of CustomException
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') $Res call({Object? model = null,}) {
-  return _then(Unauthorized(
+  return _then(NotFound(
 model: null == model ? _self.model : model // ignore: cast_nullable_to_non_nullable
 as ErrorModel,
   ));
@@ -111,8 +111,8 @@ as ErrorModel,
 /// @nodoc
 
 
-class UserNotFound implements CustomException {
-  const UserNotFound({required this.model});
+class MaxTryExceeded implements CustomException {
+  const MaxTryExceeded({required this.model});
   
 
  final  ErrorModel model;
@@ -121,13 +121,13 @@ class UserNotFound implements CustomException {
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-$UserNotFoundCopyWith<UserNotFound> get copyWith => _$UserNotFoundCopyWithImpl<UserNotFound>(this, _$identity);
+$MaxTryExceededCopyWith<MaxTryExceeded> get copyWith => _$MaxTryExceededCopyWithImpl<MaxTryExceeded>(this, _$identity);
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is UserNotFound&&(identical(other.model, model) || other.model == model));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is MaxTryExceeded&&(identical(other.model, model) || other.model == model));
 }
 
 
@@ -136,15 +136,15 @@ int get hashCode => Object.hash(runtimeType,model);
 
 @override
 String toString() {
-  return 'CustomException.userNotFound(model: $model)';
+  return 'CustomException.maxTryExceeded(model: $model)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class $UserNotFoundCopyWith<$Res> implements $CustomExceptionCopyWith<$Res> {
-  factory $UserNotFoundCopyWith(UserNotFound value, $Res Function(UserNotFound) _then) = _$UserNotFoundCopyWithImpl;
+abstract mixin class $MaxTryExceededCopyWith<$Res> implements $CustomExceptionCopyWith<$Res> {
+  factory $MaxTryExceededCopyWith(MaxTryExceeded value, $Res Function(MaxTryExceeded) _then) = _$MaxTryExceededCopyWithImpl;
 @useResult
 $Res call({
  ErrorModel model
@@ -155,17 +155,17 @@ $Res call({
 
 }
 /// @nodoc
-class _$UserNotFoundCopyWithImpl<$Res>
-    implements $UserNotFoundCopyWith<$Res> {
-  _$UserNotFoundCopyWithImpl(this._self, this._then);
+class _$MaxTryExceededCopyWithImpl<$Res>
+    implements $MaxTryExceededCopyWith<$Res> {
+  _$MaxTryExceededCopyWithImpl(this._self, this._then);
 
-  final UserNotFound _self;
-  final $Res Function(UserNotFound) _then;
+  final MaxTryExceeded _self;
+  final $Res Function(MaxTryExceeded) _then;
 
 /// Create a copy of CustomException
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') $Res call({Object? model = null,}) {
-  return _then(UserNotFound(
+  return _then(MaxTryExceeded(
 model: null == model ? _self.model : model // ignore: cast_nullable_to_non_nullable
 as ErrorModel,
   ));
@@ -177,8 +177,8 @@ as ErrorModel,
 /// @nodoc
 
 
-class TokenExpired implements CustomException {
-  const TokenExpired({required this.model});
+class NicknameReadFail implements CustomException {
+  const NicknameReadFail({required this.model});
   
 
  final  ErrorModel model;
@@ -187,13 +187,13 @@ class TokenExpired implements CustomException {
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-$TokenExpiredCopyWith<TokenExpired> get copyWith => _$TokenExpiredCopyWithImpl<TokenExpired>(this, _$identity);
+$NicknameReadFailCopyWith<NicknameReadFail> get copyWith => _$NicknameReadFailCopyWithImpl<NicknameReadFail>(this, _$identity);
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is TokenExpired&&(identical(other.model, model) || other.model == model));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NicknameReadFail&&(identical(other.model, model) || other.model == model));
 }
 
 
@@ -202,15 +202,15 @@ int get hashCode => Object.hash(runtimeType,model);
 
 @override
 String toString() {
-  return 'CustomException.tokenExpired(model: $model)';
+  return 'CustomException.nicknameReadFail(model: $model)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class $TokenExpiredCopyWith<$Res> implements $CustomExceptionCopyWith<$Res> {
-  factory $TokenExpiredCopyWith(TokenExpired value, $Res Function(TokenExpired) _then) = _$TokenExpiredCopyWithImpl;
+abstract mixin class $NicknameReadFailCopyWith<$Res> implements $CustomExceptionCopyWith<$Res> {
+  factory $NicknameReadFailCopyWith(NicknameReadFail value, $Res Function(NicknameReadFail) _then) = _$NicknameReadFailCopyWithImpl;
 @useResult
 $Res call({
  ErrorModel model
@@ -221,17 +221,17 @@ $Res call({
 
 }
 /// @nodoc
-class _$TokenExpiredCopyWithImpl<$Res>
-    implements $TokenExpiredCopyWith<$Res> {
-  _$TokenExpiredCopyWithImpl(this._self, this._then);
+class _$NicknameReadFailCopyWithImpl<$Res>
+    implements $NicknameReadFailCopyWith<$Res> {
+  _$NicknameReadFailCopyWithImpl(this._self, this._then);
 
-  final TokenExpired _self;
-  final $Res Function(TokenExpired) _then;
+  final NicknameReadFail _self;
+  final $Res Function(NicknameReadFail) _then;
 
 /// Create a copy of CustomException
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') $Res call({Object? model = null,}) {
-  return _then(TokenExpired(
+  return _then(NicknameReadFail(
 model: null == model ? _self.model : model // ignore: cast_nullable_to_non_nullable
 as ErrorModel,
   ));
@@ -243,8 +243,8 @@ as ErrorModel,
 /// @nodoc
 
 
-class ProductNotFound implements CustomException {
-  const ProductNotFound({required this.model});
+class NicknameAlreadyExist implements CustomException {
+  const NicknameAlreadyExist({required this.model});
   
 
  final  ErrorModel model;
@@ -253,13 +253,13 @@ class ProductNotFound implements CustomException {
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-$ProductNotFoundCopyWith<ProductNotFound> get copyWith => _$ProductNotFoundCopyWithImpl<ProductNotFound>(this, _$identity);
+$NicknameAlreadyExistCopyWith<NicknameAlreadyExist> get copyWith => _$NicknameAlreadyExistCopyWithImpl<NicknameAlreadyExist>(this, _$identity);
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ProductNotFound&&(identical(other.model, model) || other.model == model));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NicknameAlreadyExist&&(identical(other.model, model) || other.model == model));
 }
 
 
@@ -268,15 +268,15 @@ int get hashCode => Object.hash(runtimeType,model);
 
 @override
 String toString() {
-  return 'CustomException.productNotFound(model: $model)';
+  return 'CustomException.nicknameAlreadyExist(model: $model)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class $ProductNotFoundCopyWith<$Res> implements $CustomExceptionCopyWith<$Res> {
-  factory $ProductNotFoundCopyWith(ProductNotFound value, $Res Function(ProductNotFound) _then) = _$ProductNotFoundCopyWithImpl;
+abstract mixin class $NicknameAlreadyExistCopyWith<$Res> implements $CustomExceptionCopyWith<$Res> {
+  factory $NicknameAlreadyExistCopyWith(NicknameAlreadyExist value, $Res Function(NicknameAlreadyExist) _then) = _$NicknameAlreadyExistCopyWithImpl;
 @useResult
 $Res call({
  ErrorModel model
@@ -287,17 +287,17 @@ $Res call({
 
 }
 /// @nodoc
-class _$ProductNotFoundCopyWithImpl<$Res>
-    implements $ProductNotFoundCopyWith<$Res> {
-  _$ProductNotFoundCopyWithImpl(this._self, this._then);
+class _$NicknameAlreadyExistCopyWithImpl<$Res>
+    implements $NicknameAlreadyExistCopyWith<$Res> {
+  _$NicknameAlreadyExistCopyWithImpl(this._self, this._then);
 
-  final ProductNotFound _self;
-  final $Res Function(ProductNotFound) _then;
+  final NicknameAlreadyExist _self;
+  final $Res Function(NicknameAlreadyExist) _then;
 
 /// Create a copy of CustomException
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') $Res call({Object? model = null,}) {
-  return _then(ProductNotFound(
+  return _then(NicknameAlreadyExist(
 model: null == model ? _self.model : model // ignore: cast_nullable_to_non_nullable
 as ErrorModel,
   ));
@@ -309,8 +309,8 @@ as ErrorModel,
 /// @nodoc
 
 
-class MissingRequiredValue implements CustomException {
-  const MissingRequiredValue({required this.model});
+class InvalidToken implements CustomException {
+  const InvalidToken({required this.model});
   
 
  final  ErrorModel model;
@@ -319,13 +319,13 @@ class MissingRequiredValue implements CustomException {
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-$MissingRequiredValueCopyWith<MissingRequiredValue> get copyWith => _$MissingRequiredValueCopyWithImpl<MissingRequiredValue>(this, _$identity);
+$InvalidTokenCopyWith<InvalidToken> get copyWith => _$InvalidTokenCopyWithImpl<InvalidToken>(this, _$identity);
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is MissingRequiredValue&&(identical(other.model, model) || other.model == model));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is InvalidToken&&(identical(other.model, model) || other.model == model));
 }
 
 
@@ -334,15 +334,15 @@ int get hashCode => Object.hash(runtimeType,model);
 
 @override
 String toString() {
-  return 'CustomException.missingRequiredValue(model: $model)';
+  return 'CustomException.invalidToken(model: $model)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class $MissingRequiredValueCopyWith<$Res> implements $CustomExceptionCopyWith<$Res> {
-  factory $MissingRequiredValueCopyWith(MissingRequiredValue value, $Res Function(MissingRequiredValue) _then) = _$MissingRequiredValueCopyWithImpl;
+abstract mixin class $InvalidTokenCopyWith<$Res> implements $CustomExceptionCopyWith<$Res> {
+  factory $InvalidTokenCopyWith(InvalidToken value, $Res Function(InvalidToken) _then) = _$InvalidTokenCopyWithImpl;
 @useResult
 $Res call({
  ErrorModel model
@@ -353,17 +353,17 @@ $Res call({
 
 }
 /// @nodoc
-class _$MissingRequiredValueCopyWithImpl<$Res>
-    implements $MissingRequiredValueCopyWith<$Res> {
-  _$MissingRequiredValueCopyWithImpl(this._self, this._then);
+class _$InvalidTokenCopyWithImpl<$Res>
+    implements $InvalidTokenCopyWith<$Res> {
+  _$InvalidTokenCopyWithImpl(this._self, this._then);
 
-  final MissingRequiredValue _self;
-  final $Res Function(MissingRequiredValue) _then;
+  final InvalidToken _self;
+  final $Res Function(InvalidToken) _then;
 
 /// Create a copy of CustomException
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') $Res call({Object? model = null,}) {
-  return _then(MissingRequiredValue(
+  return _then(InvalidToken(
 model: null == model ? _self.model : model // ignore: cast_nullable_to_non_nullable
 as ErrorModel,
   ));
@@ -375,8 +375,8 @@ as ErrorModel,
 /// @nodoc
 
 
-class Invalid implements CustomException {
-  const Invalid({required this.model});
+class ExpiredAccessToken implements CustomException {
+  const ExpiredAccessToken({required this.model});
   
 
  final  ErrorModel model;
@@ -385,13 +385,13 @@ class Invalid implements CustomException {
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-$InvalidCopyWith<Invalid> get copyWith => _$InvalidCopyWithImpl<Invalid>(this, _$identity);
+$ExpiredAccessTokenCopyWith<ExpiredAccessToken> get copyWith => _$ExpiredAccessTokenCopyWithImpl<ExpiredAccessToken>(this, _$identity);
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Invalid&&(identical(other.model, model) || other.model == model));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ExpiredAccessToken&&(identical(other.model, model) || other.model == model));
 }
 
 
@@ -400,15 +400,15 @@ int get hashCode => Object.hash(runtimeType,model);
 
 @override
 String toString() {
-  return 'CustomException.invalid(model: $model)';
+  return 'CustomException.expiredAccessToken(model: $model)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class $InvalidCopyWith<$Res> implements $CustomExceptionCopyWith<$Res> {
-  factory $InvalidCopyWith(Invalid value, $Res Function(Invalid) _then) = _$InvalidCopyWithImpl;
+abstract mixin class $ExpiredAccessTokenCopyWith<$Res> implements $CustomExceptionCopyWith<$Res> {
+  factory $ExpiredAccessTokenCopyWith(ExpiredAccessToken value, $Res Function(ExpiredAccessToken) _then) = _$ExpiredAccessTokenCopyWithImpl;
 @useResult
 $Res call({
  ErrorModel model
@@ -419,17 +419,347 @@ $Res call({
 
 }
 /// @nodoc
-class _$InvalidCopyWithImpl<$Res>
-    implements $InvalidCopyWith<$Res> {
-  _$InvalidCopyWithImpl(this._self, this._then);
+class _$ExpiredAccessTokenCopyWithImpl<$Res>
+    implements $ExpiredAccessTokenCopyWith<$Res> {
+  _$ExpiredAccessTokenCopyWithImpl(this._self, this._then);
 
-  final Invalid _self;
-  final $Res Function(Invalid) _then;
+  final ExpiredAccessToken _self;
+  final $Res Function(ExpiredAccessToken) _then;
 
 /// Create a copy of CustomException
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') $Res call({Object? model = null,}) {
-  return _then(Invalid(
+  return _then(ExpiredAccessToken(
+model: null == model ? _self.model : model // ignore: cast_nullable_to_non_nullable
+as ErrorModel,
+  ));
+}
+
+
+}
+
+/// @nodoc
+
+
+class ExpiredRefreshToken implements CustomException {
+  const ExpiredRefreshToken({required this.model});
+  
+
+ final  ErrorModel model;
+
+/// Create a copy of CustomException
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$ExpiredRefreshTokenCopyWith<ExpiredRefreshToken> get copyWith => _$ExpiredRefreshTokenCopyWithImpl<ExpiredRefreshToken>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ExpiredRefreshToken&&(identical(other.model, model) || other.model == model));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,model);
+
+@override
+String toString() {
+  return 'CustomException.expiredRefreshToken(model: $model)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $ExpiredRefreshTokenCopyWith<$Res> implements $CustomExceptionCopyWith<$Res> {
+  factory $ExpiredRefreshTokenCopyWith(ExpiredRefreshToken value, $Res Function(ExpiredRefreshToken) _then) = _$ExpiredRefreshTokenCopyWithImpl;
+@useResult
+$Res call({
+ ErrorModel model
+});
+
+
+
+
+}
+/// @nodoc
+class _$ExpiredRefreshTokenCopyWithImpl<$Res>
+    implements $ExpiredRefreshTokenCopyWith<$Res> {
+  _$ExpiredRefreshTokenCopyWithImpl(this._self, this._then);
+
+  final ExpiredRefreshToken _self;
+  final $Res Function(ExpiredRefreshToken) _then;
+
+/// Create a copy of CustomException
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? model = null,}) {
+  return _then(ExpiredRefreshToken(
+model: null == model ? _self.model : model // ignore: cast_nullable_to_non_nullable
+as ErrorModel,
+  ));
+}
+
+
+}
+
+/// @nodoc
+
+
+class InvalidPassword implements CustomException {
+  const InvalidPassword({required this.model});
+  
+
+ final  ErrorModel model;
+
+/// Create a copy of CustomException
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$InvalidPasswordCopyWith<InvalidPassword> get copyWith => _$InvalidPasswordCopyWithImpl<InvalidPassword>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is InvalidPassword&&(identical(other.model, model) || other.model == model));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,model);
+
+@override
+String toString() {
+  return 'CustomException.invalidPassword(model: $model)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $InvalidPasswordCopyWith<$Res> implements $CustomExceptionCopyWith<$Res> {
+  factory $InvalidPasswordCopyWith(InvalidPassword value, $Res Function(InvalidPassword) _then) = _$InvalidPasswordCopyWithImpl;
+@useResult
+$Res call({
+ ErrorModel model
+});
+
+
+
+
+}
+/// @nodoc
+class _$InvalidPasswordCopyWithImpl<$Res>
+    implements $InvalidPasswordCopyWith<$Res> {
+  _$InvalidPasswordCopyWithImpl(this._self, this._then);
+
+  final InvalidPassword _self;
+  final $Res Function(InvalidPassword) _then;
+
+/// Create a copy of CustomException
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? model = null,}) {
+  return _then(InvalidPassword(
+model: null == model ? _self.model : model // ignore: cast_nullable_to_non_nullable
+as ErrorModel,
+  ));
+}
+
+
+}
+
+/// @nodoc
+
+
+class DuplicatedMember implements CustomException {
+  const DuplicatedMember({required this.model});
+  
+
+ final  ErrorModel model;
+
+/// Create a copy of CustomException
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$DuplicatedMemberCopyWith<DuplicatedMember> get copyWith => _$DuplicatedMemberCopyWithImpl<DuplicatedMember>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is DuplicatedMember&&(identical(other.model, model) || other.model == model));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,model);
+
+@override
+String toString() {
+  return 'CustomException.duplicatedMember(model: $model)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $DuplicatedMemberCopyWith<$Res> implements $CustomExceptionCopyWith<$Res> {
+  factory $DuplicatedMemberCopyWith(DuplicatedMember value, $Res Function(DuplicatedMember) _then) = _$DuplicatedMemberCopyWithImpl;
+@useResult
+$Res call({
+ ErrorModel model
+});
+
+
+
+
+}
+/// @nodoc
+class _$DuplicatedMemberCopyWithImpl<$Res>
+    implements $DuplicatedMemberCopyWith<$Res> {
+  _$DuplicatedMemberCopyWithImpl(this._self, this._then);
+
+  final DuplicatedMember _self;
+  final $Res Function(DuplicatedMember) _then;
+
+/// Create a copy of CustomException
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? model = null,}) {
+  return _then(DuplicatedMember(
+model: null == model ? _self.model : model // ignore: cast_nullable_to_non_nullable
+as ErrorModel,
+  ));
+}
+
+
+}
+
+/// @nodoc
+
+
+class GoogleLoginIntervalServerError implements CustomException {
+  const GoogleLoginIntervalServerError({required this.model});
+  
+
+ final  ErrorModel model;
+
+/// Create a copy of CustomException
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$GoogleLoginIntervalServerErrorCopyWith<GoogleLoginIntervalServerError> get copyWith => _$GoogleLoginIntervalServerErrorCopyWithImpl<GoogleLoginIntervalServerError>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is GoogleLoginIntervalServerError&&(identical(other.model, model) || other.model == model));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,model);
+
+@override
+String toString() {
+  return 'CustomException.googleLoginError(model: $model)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $GoogleLoginIntervalServerErrorCopyWith<$Res> implements $CustomExceptionCopyWith<$Res> {
+  factory $GoogleLoginIntervalServerErrorCopyWith(GoogleLoginIntervalServerError value, $Res Function(GoogleLoginIntervalServerError) _then) = _$GoogleLoginIntervalServerErrorCopyWithImpl;
+@useResult
+$Res call({
+ ErrorModel model
+});
+
+
+
+
+}
+/// @nodoc
+class _$GoogleLoginIntervalServerErrorCopyWithImpl<$Res>
+    implements $GoogleLoginIntervalServerErrorCopyWith<$Res> {
+  _$GoogleLoginIntervalServerErrorCopyWithImpl(this._self, this._then);
+
+  final GoogleLoginIntervalServerError _self;
+  final $Res Function(GoogleLoginIntervalServerError) _then;
+
+/// Create a copy of CustomException
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? model = null,}) {
+  return _then(GoogleLoginIntervalServerError(
+model: null == model ? _self.model : model // ignore: cast_nullable_to_non_nullable
+as ErrorModel,
+  ));
+}
+
+
+}
+
+/// @nodoc
+
+
+class RefreshReuseException implements CustomException {
+  const RefreshReuseException({required this.model});
+  
+
+ final  ErrorModel model;
+
+/// Create a copy of CustomException
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$RefreshReuseExceptionCopyWith<RefreshReuseException> get copyWith => _$RefreshReuseExceptionCopyWithImpl<RefreshReuseException>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is RefreshReuseException&&(identical(other.model, model) || other.model == model));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,model);
+
+@override
+String toString() {
+  return 'CustomException.refreshReuse(model: $model)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $RefreshReuseExceptionCopyWith<$Res> implements $CustomExceptionCopyWith<$Res> {
+  factory $RefreshReuseExceptionCopyWith(RefreshReuseException value, $Res Function(RefreshReuseException) _then) = _$RefreshReuseExceptionCopyWithImpl;
+@useResult
+$Res call({
+ ErrorModel model
+});
+
+
+
+
+}
+/// @nodoc
+class _$RefreshReuseExceptionCopyWithImpl<$Res>
+    implements $RefreshReuseExceptionCopyWith<$Res> {
+  _$RefreshReuseExceptionCopyWithImpl(this._self, this._then);
+
+  final RefreshReuseException _self;
+  final $Res Function(RefreshReuseException) _then;
+
+/// Create a copy of CustomException
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? model = null,}) {
+  return _then(RefreshReuseException(
 model: null == model ? _self.model : model // ignore: cast_nullable_to_non_nullable
 as ErrorModel,
   ));
