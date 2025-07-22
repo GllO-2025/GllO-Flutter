@@ -10,19 +10,12 @@ import 'package:gllo_flutter/design_system/foundation/color/app_color.dart';
 import 'package:gllo_flutter/design_system/foundation/font/app_text_style.dart';
 import 'package:gllo_flutter/design_system/foundation/size/app_layout.dart';
 import 'package:gllo_flutter/presentation/controller/auth/auth_controller.dart';
-import 'package:google_sign_in/google_sign_in.dart';
-import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
-class StartSignUpView extends ConsumerStatefulWidget {
+class StartSignUpView extends ConsumerWidget {
   const StartSignUpView({super.key});
 
   @override
-  ConsumerState<StartSignUpView> createState() => _StartSignUpViewState();
-}
-
-class _StartSignUpViewState extends ConsumerState<StartSignUpView> {
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final authState = ref.watch(authControllerProvider);
 
     return AppOverlayLoader(
@@ -112,8 +105,9 @@ class _StartSignUpViewState extends ConsumerState<StartSignUpView> {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              // TODO: 구글 로그인 시도
-                              _signInWithGoogle();
+                              ref
+                                  .read(authControllerProvider.notifier)
+                                  .signInWithGoogle();
                             },
                             child: Container(
                               width: 48,
@@ -135,8 +129,9 @@ class _StartSignUpViewState extends ConsumerState<StartSignUpView> {
                           const SizedBox(width: 12),
                           GestureDetector(
                             onTap: () {
-                              // TODO: 애플 로그인 시도
-                              _signInWithApple();
+                              ref
+                                  .read(authControllerProvider.notifier)
+                                  .signInWithApple();
                             },
                             child: Container(
                               width: 48,
@@ -163,38 +158,5 @@ class _StartSignUpViewState extends ConsumerState<StartSignUpView> {
         ),
       ),
     );
-  }
-
-  Future<void> _signInWithApple() async {
-    final credential = await SignInWithApple.getAppleIDCredential(
-      scopes: [
-        AppleIDAuthorizationScopes.email,
-        AppleIDAuthorizationScopes.fullName,
-      ],
-    );
-
-    if (credential.identityToken == null) {
-      return;
-    }
-
-    await ref
-        .read(authControllerProvider.notifier)
-        .signInWithApple(
-          idToken: credential.identityToken ?? '',
-          authorizationCode: credential.authorizationCode,
-        );
-  }
-
-  Future<void> _signInWithGoogle() async {
-    final googleUser = await GoogleSignIn().signIn();
-    final authentication = await googleUser?.authentication;
-
-    if (authentication?.accessToken == null) {
-      return;
-    }
-
-    await ref
-        .read(authControllerProvider.notifier)
-        .signInWithGoogle(accessToken: authentication?.accessToken ?? '');
   }
 }

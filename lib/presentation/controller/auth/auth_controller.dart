@@ -10,7 +10,9 @@ import 'package:gllo_flutter/domain/param/auth/sign_in_with_google_params.dart';
 import 'package:gllo_flutter/domain/usecase/auth/sign_in_with_apple_usecase.dart';
 import 'package:gllo_flutter/domain/usecase/auth/sign_in_with_google_usecase.dart';
 import 'package:gllo_flutter/presentation/controller/auth/auth_state.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 part 'generated/auth_controller.g.dart';
 
@@ -46,17 +48,25 @@ class AuthController extends _$AuthController {
   }
 
   /// 애플 로그인
-  Future<void> signInWithApple({
-    required String idToken,
-    required String authorizationCode,
-  }) async {
+  Future<void> signInWithApple() async {
+    final credential = await SignInWithApple.getAppleIDCredential(
+      scopes: [
+        AppleIDAuthorizationScopes.email,
+        AppleIDAuthorizationScopes.fullName,
+      ],
+    );
+
+    if (credential.identityToken == null) {
+      return;
+    }
+
     state = state.copyWith(signInStatus: Status.loading);
 
     final result = await Usecase.execute(
       usecase: ref.read(signInWithAppleUsecaseProvider),
       params: SignInWithAppleParams(
-        idToken: idToken,
-        authorizationCode: authorizationCode,
+        idToken: credential.identityToken!,
+        authorizationCode: credential.authorizationCode,
       ),
     );
 
@@ -64,12 +74,19 @@ class AuthController extends _$AuthController {
   }
 
   /// 구글 로그인
-  Future<void> signInWithGoogle({required String accessToken}) async {
+  Future<void> signInWithGoogle() async {
+    final googleUser = await GoogleSignIn().signIn();
+    final authentication = await googleUser?.authentication;
+
+    if (authentication?.accessToken == null) {
+      return;
+    }
+
     state = state.copyWith(signInStatus: Status.loading);
 
     final result = await Usecase.execute(
       usecase: ref.read(signInWithGoogleUsecaseProvider),
-      params: SignInWithGoogleParams(accessToken: accessToken),
+      params: SignInWithGoogleParams(accessToken: authentication!.accessToken!),
     );
 
     await _setOAuthSignInResult(result: result);
