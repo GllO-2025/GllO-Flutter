@@ -87,7 +87,7 @@ class _AppSearchBarState extends State<AppSearchBar> {
     if (!hasText) return null;
 
     final icon =
-    hasFocus ? Assets.icon.system.cancel : Assets.icon.system.closeLine;
+        hasFocus ? Assets.icon.system.cancel : Assets.icon.system.closeLine;
 
     return Padding(
       padding: const EdgeInsets.only(left: 12, right: 16),

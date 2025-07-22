@@ -1,0 +1,661 @@
+{
+  "splash" : "Settle in Korea, one meal\nat a time, GIIO",
+  "onboarding": {
+    "title1" : "Discover real local spots\nverified by students",
+    "desc1" : "Find local food spots with short-\nform reviews from fellow students",
+    "title2" : "Verify easily with your\nschool email",
+    "desc2" : "Get trusted food\nrecommendations",
+    "title3" : "Get food spots just\nfor you",
+    "desc3" : "Receive AI-personalized food\nrecommendations",
+    "nextButton" : "Next"
+  },
+  "startSignUp" : {
+    "title": "Settle in Korea, one meal\nat a time, GIIO",
+    "signUpButtonText" : "Sign up with university email",
+    "signInButtonText" : "I already have an account",
+    "findAccount" : "Forgot your ID or password?",
+    "socialSignInDesc" : "Or log in with a social account"
+  },
+  "signIn" : {
+    "appBarTitle" : "Log In",
+    "idHintText" : "Enter university email or username",
+    "passwordHintText" : "Enter password",
+    "signInButtonText" : "Log In",
+    "findAccount" : "Find ID or password",
+    "socialSignInDesc" : "Or log in with a social account",
+    "error" : {
+      "notFoundId" : "The school email or username is not registered.",
+      "wrongPassword" : "Passwords do not match."
+    }
+  },
+  "signUp" : {
+    "birthDay" : {
+      "appBarTitle" : "Sign up",
+      "title" : "When\nis your birthday?",
+      "desc" : "Your birthday won't be shown",
+      "inputHintText" : "YYYY-MM-DD",
+      "nextButtonText" : "Next",
+      "error" : {
+        "invalidBirthDay" : "Include '-' in your number"
+      }
+    },
+    "terms" : {
+      "appBarTitle" : "Sign Up",
+      "title" : "Please\nagree to the terms",
+      "desc" : "Required terms to use the service",
+      "allAgreeText" : "Agree to all",
+      "termsText" : "Terms of service",
+      "locationBasedTermsText" : "Location service terms",
+      "marketingConsentText" : "Marketing consent",
+      "label" : {
+        "required" : "(Required)",
+        "optional" : "(Optional)"
+      },
+      "nextButtonText" : "Next"
+    },
+    "email" : {
+      "appBarTitle" : "Sign Up",
+      "title" : "Enter\nyour university email",
+      "desc" : "Only available to current students",
+      "emailInputHintText" : "example@university.edu",
+      "verifyStudentIdCard" : "No university email? Verify with student ID",
+      "codeInputHintText" : "6-digit code",
+      "resendCodeText" : "Resend code",
+      "sendCodeText" : "Send code",
+      "verifyCodeText" : "Verify code",
+      "emailInputHelperMessage" : "Please use your university email",
+      "nextButtonText" : "Next",
+      "error" : {
+        "invalidEmail" : "Only school emails are accepted",
+        "wrongCode" : "The code does not match"
+      }
+    },
+    "nameAndPassword" : {
+      "appBarTitle" : "Sign Up",
+      "title" : "Create\nyour username and password",
+      "desc" : "Your username is visible to others",
+      "nameInputHintText" : "Username",
+      "nameInputHelperMessage" : "Use letters,numbers,_ or .",
+      "canUseNameHelperMessage" : "Username is available",
+      "passwordInputHintText" : "Password",
+      "passwordInputHelperMessage" : "At least 8 characters, letters, numbers, symbols",
+      "confirmPasswordInputHintText" : "Confirm password",
+      "nextButtonText" : "Next",
+      "error" : {
+        "duplicateName" : "This username is already taken",
+        "invalidName" : "Only letters,numbers, _ or . allowed",
+        "exceedLimit" : "Username must be under 30 characters",
+        "mismatchPassword" : "Please re-enter your password"
+      }
+    },
+    "country" : {
+      "appBarTitle" : "Sign Up",
+      "title" : "Which country are you from?",
+      "desc" : "Country cannot be changed later",
+      "countryInputHintText" : "Search for your country",
+      "nextButtonText" : "Next"
+    },
+    "success" : {
+      "title" : "You’ve successfully signed up.",
+      "desc" : "Now you can find the real deal,\nverified by current students",
+      "buttonText" : "Find restaurants"
+    },
+    "studentIdCard" : {
+      "appBarTitle" : "Sign Up",
+      "title" : "Upload\nyour current student ID",
+      "desc" : "Only students can use this service",
+      "imageUploadLabel" : "Upload student ID image",
+      "imageUploadHintText" : "JPG or PNG,max 10MB",
+      "openCameraButtonText" : "Take a photo",
+      "nextButtonText" : "Next",
+      "error" : {
+        "exceedCapacity" : {
+          "title": "Image upload failed",
+          "desc" : "Only files in JPG or PNG format,\n10MB or less, are accepted",
+          "button" : "Okay"
+        }
+      }
+    }
+  },
+  "findAccount" : {
+    "appBarTitle" : "Find ID or password",
+    "findIdTab" : {
+      "name" : "ID",
+      "idInputHintText" : "example@university.edu",
+      "idInputHelperMessage" : "Enter your university or recovery email",
+      "sendCodeText" : "Send code",
+      "verifyCodeText" : "Verify code",
+      "codeInputHelperMessage" : "Enter the code sent to your email",
+      "error" : {
+        "notFoundId" : "Not a registered or recovery email",
+        "wrongCode" : "The code is incorrect"
+      },
+      "success" : {
+        "title" : "Your ID is found!",
+        "desc" : "This is the ID joined to your email",
+        "signInButtonText" : "Login"
+      }
+    },
+    "findPasswordTab" : {
+      "name" : "Password",
+      "passwordInputLabel" : "Set new password",
+      "passwordInputHintText" : "New password (8+ characters)",
+      "confirmPasswordInputHintText" : "Re-enter the new password",
+      "passwordHelperMessage" : "At least 8 characters, letters, numbers, symbols or recovery email,\nMust be different from old password",
+      "resetPasswordButtonText" : "Change password",
+      "error" : {
+        "sameOldPassword" : "Must be different from old password",
+        "invalidPassword" : "Please re-enter your password"
+      },
+      "success" : {
+        "title" : "Password is changed!",
+        "desc" : "Please log in with your new password",
+        "signInButtonText" : "Login",
+        "resetPasswordButtonText" : "Reset Password"
+      }
+    }
+  },
+  "feedUpload" : {
+    "selectMedia" : {
+      "appBarTitle" : "upload Feed",
+      "videoTabName" : "Video",
+      "photoTabName" : "Photo",
+      "nextButtonText" : "Next"
+    },
+    "post" : {
+      "appBarTitle" : "Upload Feed",
+      "titleInputLabel" : "Title",
+      "titleInputHintText" : "Enter your title",
+      "descInputLabel" : "Description",
+      "descInputHintText" : "Add a description of feed",
+      "placeLabel" : "Places",
+      "foodCategoryLabel" : "Food Category",
+      "tagLabel" : "Tag",
+      "uploadButtonText" : "Upload",
+      "tag" : {
+        "title" : "Tag",
+        "label" : "Enter Tag",
+        "addTagButtonText" : "Add",
+        "note" : "Multiple selection allowed",
+        "inputHintText" : "enter the tag you wish to register",
+        "uploadButtonText" : "Add"
+      },
+      "foodCategory": {
+        "title" : "Food Category",
+        "label" : "Type of Food",
+        "note" : "Multiple selection allowed",
+        "korean" : "Korean",
+        "western" : "Western",
+        "japanese" : "Japanese",
+        "chinese" : "Chinese",
+        "cafe" : "Cafe/Tea House",
+        "unique" : "Unique restaurant",
+        "uploadButtonText" : "Add"
+      },
+      "place" : {
+        "title" : "Places",
+        "label" : "Search",
+        "note" : "Multiple selection allowed",
+        "inputHintText" : "Search for a place to Add",
+        "uploadOnePlaceButtonText" : "Add",
+        "uploadAtLeastTwoPlaceButtonText" : "Add {} Places"
+      },
+      "success" : {
+        "toastMessage" : "The feed has been uploaded"
+      }
+    }
+  },
+  "collectionFeed" : {
+    "appBarTitle" : "Collection",
+    "empty" : {
+      "title" : "No collection yet",
+      "desc" : "Tap + to create your first collection",
+      "collection" : {
+        "name" : "Collection Title",
+        "title" : "No saved posts",
+        "desc" : "Save posts to fill your collection"
+      }
+    },
+    "tab" : {
+      "feed" : "Feed",
+      "place": "Places"
+    },
+    "edit" : {
+      "deleteButtonText" : "Delete Collection",
+      "editButtonText" : "Edit Collection",
+      "selectButtonText" : "Select Content",
+      "cancelButtonText" : "Cancel"
+    },
+    "delete" : {
+      "title" : "Delete this collection?",
+      "desc" : "All photos and videos in this collection will be deleted",
+      "deleteButtonText" : "Delete Collection",
+      "cancelButtonText" : "Cancel",
+      "success" : {
+        "toastMessage" : "Selected collection has been deleted",
+        "toastAction" : "Undo"
+      }
+    },
+    "modify" : {
+      "appBarTitle" : "Edit Collection",
+      "collectionName" : "Collection Name",
+      "visibilityTitle" : "Visibility Option",
+      "visibilityPrivateText" : "Private",
+      "visibilityPublicText" : "Public",
+      "buttonText" : "Save Changes"
+    },
+    "add" : {
+      "appBarTitle" : "Add Collection",
+      "collectionName" : "Collection Name",
+      "collectionNameHintText" : "Enter collection name",
+      "visibilityTitle" : "Visibility Option",
+      "visibilityPrivateText" : "Private",
+      "visibilityPublicText" : "Public",
+      "buttonText" : "Add Collection"
+    },
+    "contents" : {
+      "delete" : {
+        "cancelButtonText" : "Cancel",
+        "allSelectButtonText" : "Select All",
+        "deleteButtonText" : "Delete",
+        "moveButtonText" : "Move to another Collection",
+        "modal" : {
+          "title" : "Delete this content?",
+          "desc" : "Deleted content will be removed from this collection only",
+          "cancelButtonText" : "Cancel",
+          "deleteButtonText" : "Delete Content"
+        },
+        "success" : {
+          "toastMessage" : "Selected content has been removed",
+          "toastAction" : "Undo"
+        }
+      },
+      "move" : {
+        "okButtonText" : "Confirm",
+        "success" : {
+          "toastMessage" : "Selected content has been moved",
+          "toastAction" : "Undo"
+        }
+      }
+    }
+  },
+  "collectioPlace" : {
+    "appBarTitle" : "Collection",
+    "empty" : {
+      "title" : "No collection yet",
+      "desc" : "Tap + to create your first collection",
+      "collection" : {
+        "name" : "Collection Title",
+        "title" : "No saved posts",
+        "desc" : "Save posts to fill your collection"
+      }
+    },
+    "tab" : {
+      "feed" : "Feed",
+      "place": "Places"
+    },
+    "edit" : {
+      "deleteButtonText" : "Delete Collection",
+      "editButtonText" : "Edit Collection",
+      "selectButtonText" : "Select Places",
+      "cancelButtonText" : "Cancel"
+    },
+    "delete" : {
+      "title" : "Delete this collection?",
+      "desc" : "All places in this collection whill be deleted",
+      "deleteButtonText" : "Delete Collection",
+      "cancelButtonText" : "Cancel",
+      "success" : {
+        "toastMessage" : "Selected collection has been deleted",
+        "toastAction" : "Undo"
+      }
+    },
+    "modify" : {
+      "appBarTitle" : "Edit Collection",
+      "collectionName" : "Collection Name",
+      "visibilityTitle" : "Visibility Option",
+      "visibilityPrivateText" : "Private",
+      "visibilityPublicText" : "Public",
+      "buttonText" : "Save Changes"
+    },
+    "add" : {
+      "appBarTitle" : "Add Collection",
+      "collectionName" : "Collection Name",
+      "collectionNameHintText" : "Enter collection name",
+      "visibilityTitle" : "Visibility Option",
+      "visibilityPrivateText" : "Private",
+      "visibilityPublicText" : "Public",
+      "buttonText" : "Add Collection"
+    },
+    "contents" : {
+      "delete" : {
+        "cancelButtonText" : "Cancel",
+        "allSelectButtonText" : "Select All",
+        "deleteButtonText" : "Delete",
+        "moveButtonText" : "Move to another Collection",
+        "modal" : {
+          "title" : "Delete this Places?",
+          "desc" : "Deleted place will be removed from this collection only",
+          "cancelButtonText" : "Cancel",
+          "deleteButtonText" : "Delete Place"
+        },
+        "success" : {
+          "toastMessage" : "Selected Places have been removed",
+          "toastAction" : "Undo"
+        }
+      },
+      "move" : {
+        "okButtonText" : "Confirm",
+        "success" : {
+          "toastMessage" : "Selected Places have been moved",
+          "toastAction" : "Undo"
+        }
+      }
+    }
+  },
+  "userProfile" : {
+    "appBarTitle" : "User Profile",
+    "userName" : "User",
+    "profileMessage" : "Profile Message",
+    "verifyButtonText" : "Verified Student",
+    "postLabel" : "Posts",
+    "followerLabel" : "Followers",
+    "followingLabel" : "Following",
+    "editButtonText" : "Edit Profile",
+    "tab" : {
+      "place" : "Places",
+      "feed" : "Feed"
+    },
+    "modal" : {
+      "blockButtonText" : "Block",
+      "unblockButtonText" : "Unblock",
+      "reportButtonText" : "Report",
+      "cancelButtonText" : "Cancel"
+    },
+    "block" : {
+      "title" : "Block this user?",
+      "desc" : "You will no longer see their profile or content",
+      "blockButtonText" : "Block",
+      "cancelButtonText" : "Cancel",
+      "success" : {
+        "toastMessage" : "The user has been blocked"
+      }
+    },
+    "report" : {
+      "appBarTitle" : "Report",
+      "reason" : {
+        "title" : "Please select a reason for reporting",
+        "option" : {
+          "spamOrPromotion" : "Spam or promotional content",
+          "falseInfo" : "Contains false information",
+          "copyright" : "Copyright infringement",
+          "other" : "Other"
+        },
+        "detailLabel" : "Additional details (optional)"
+      },
+      "reportButtonText" : "Report",
+      "success" : {
+        "toastMessage" : "Report submitted for this user"
+      }
+    }
+  },
+  "myPage" : {
+    "appBarTitle" : "My Profile",
+    "userName" : "Username",
+    "profileMessage" : "Profile Message",
+    "verifyButtonText" : "Verified Student",
+    "postLabel" : "Posts",
+    "followerLabel" : "Followers",
+    "followingLabel" : "Following",
+    "editButtonText" : "Edit Profile",
+    "tab" : {
+      "place" : "Places",
+      "feed" : "Feed"
+    },
+    "follow" : {
+      "appBarTitle" : "Follow",
+      "followButtonText" : "Follow",
+      "followingButtonText" : "Following",
+      "tab" : {
+        "followerText" : "Follower",
+        "followingText" : "Following"
+      }
+    },
+    "profile" : {
+      "edit" : {
+        "appBarTitle" : "Edit Profile",
+        "cameraButtonText" : "Change Image",
+        "userName" : {
+          "title" : "Change Username",
+          "hintText" : "Username",
+          "helpText" : "User letters, numbers, _ and . only"
+        },
+        "introduce" : {
+          "title" : "Introduction",
+          "hintText" : "Tell others a little about you",
+          "helpText" : "Up to 28 characters allowed"
+        },
+        "editButtonText" : "Save Changes"
+      },
+      "setting" : {
+        "appBarTitle" : "Profile Settings",
+        "menu" : {
+          "myActivity" : "My Activity",
+          "verificationStatus" : "Verification Status",
+          "recoveryEmail" : "Register Recovery Email",
+          "languageSetting" : "Language Settings",
+          "blockedAccount" : "Blocked Accounts",
+          "helpAndFeedback" : "Help & Feedback",
+          "logout" : "Log Out",
+          "deleteAccount" : "Delete Account"
+        },
+        "myActivity" : {
+          "appBarTitle" : "My Activity",
+          "likeText" : "Likes",
+          "commentText" : "Comments"
+        },
+        "verificationStatus" : {
+          "appBarTitle" : "Verification Status",
+          "emailVerificationText" : "School Email Verification",
+          "idVerificationText" : "Student ID Verification",
+          "verifiedButtonText" : "Verified",
+          "verifyButtonText" : "Verify Now"
+        },
+        "recoveryEmail" : {
+          "appBarTitle" : "Register Recovery Email",
+          "address" : {
+            "title" : "Recovery Email Address",
+            "hintText" : "Enter a non-school email address",
+            "helpText" : "Used for ID/password recovery"
+          },
+          "error" : {
+            "nonSchoolEmail" : "Please enter a non-school email address",
+            "invalidEmail" : "Please enter a valid email address"
+          },
+          "buttonText" : "Register"
+        },
+        "languageSetting" : {
+          "appBartitle" : "Language Settings",
+          "english" : "English",
+          "korean" : "Korean",
+          "buttonText" : "Apply Language"
+        },
+        "blockedAccount" : {
+          "appBarTitle" : "Blocked User",
+          "unblockButtonText" : "Unblock",
+          "modal" : {
+            "title" : "Unblock Username1",
+            "desc" : "You can now see Username1’s posts.",
+            "unblockButtonText" : "Unblock",
+            "cancelButtonText" : "Cancel"
+          }
+        },
+        "helpAndFeedback" : {
+          "appBarTitle" : "Help & Feedback",
+          "subtitle" : "Contact Us",
+          "desc" : "If you have any questions or suggestions, please contact us using the link below.",
+          "buttonText" : "Contact us via Google Form"
+        },
+        "logout" : {
+          "title" : "Log Out",
+          "desc" : "Are you sure you want to log out?",
+          "logoutButtonText" : "Log Out",
+          "cancelButtonText" : "Cancel"
+        },
+        "deleteAccount" : {
+          "appBarTitle" : "Delete Account",
+          "subtitle" : "Delete Your Account",
+          "desc" : "All your posts will be deleted.",
+          "reasonTitle" : "Can you tell us why you’re leaving?",
+          "hintText" : "Tell us your reason",
+          "buttonText" : "Delete Account"
+        }
+      }
+    }
+  },
+  "home" : {
+    "regionDropdown" : {
+      "all" : "All regions",
+      "smwu" : "SMWU",
+      "kku" : "KKU (Coming soon)"
+    },
+    "newFeed" : {
+      "title" : "New this week",
+      "desc" : "Updated every Friday"
+    },
+    "top10" : {
+      "title" : "Student Picks: Top 10 Restaurants"
+    },
+    "search" : {
+      "inputHintText" : "Search places or menu",
+      "recentSearchText" : "Recent Searches",
+      "tab" : {
+        "feed" : "Feed",
+        "place" : "Places"
+      }
+    }
+  },
+  "feedDetail" : {
+    "placeButtonText" : "View {} Places",
+    "followingButtonText" : "Following",
+    "followButtonText" : "Follow",
+    "followerNumber" : "Follower {}",
+    "viewPlace" : {
+      "title" : "Places in this post",
+      "bookmarkText" : "Add",
+      "bookmarkedText" : "Added",
+      "detailText" : "Details"
+    },
+    "bookmark" : {
+      "feedTitle" : "Save to Feed collection",
+      "feedSubTitle" : "Feed collections",
+      "placeTitle" : "Save to place collection",
+      "placeSubTitle" : "Place collections",
+      "addCollectionText" : "New",
+      "save" : "Save",
+      "collectionItem" : {
+        "visibilityPublicText" : "Public",
+        "visibilityPrivateText" : "Private",
+        "postNumberText" : "{} posts/places"
+      },
+      "empty" : {
+        "title" : "No collections created",
+        "desc" : "Create a new collection to organize your contents"
+      }
+    },
+    "report" : {
+      "title" : "Report",
+      "subTitle" : "Select a reason",
+      "reason" : {
+        "spamOrPromotion" : "Spam or promotional content",
+        "falseInfo" : "False information",
+        "inappropriate" : "Inappropriate content",
+        "copyright" : "Copyright infringement",
+        "other" : "Others",
+        "detail" : {
+          "inputLabelText" : "Details (optional)",
+          "inputHintText" : "Please describe your reason in detail"
+        }
+      },
+      "buttonText" : "Report",
+      "success" : {
+        "toastMessage" : "The report has been successfully submitted"
+      }
+    },
+    "addCollection" : {
+      "title" : "Create new collection",
+      "collectionName" : "Collection name",
+      "collectionNameHintText" : "Enter a collection name",
+      "visibilityTitle" : "Privacy settings",
+      "visibilityPrivateText" : "Private",
+      "visibilityPublicText" : "Public",
+      "buttonText" : "Save",
+      "success" : {
+        "toastMessage" : "Collection saved"
+      }
+    },
+    "comment" : {
+      "title" : "Comments",
+      "inputHintText" : "Add a comment",
+      "empty" : {
+        "title" : "No comments yet",
+        "desc" : "Be the first to comment"
+      },
+      "loading" : {
+        "title" : "Loading comments...",
+        "desc" : "Please wait a moment"
+      },
+      "reportText" : "Report",
+      "blockText" : "Block"
+    }
+  },
+  "placeDetail" : {
+    "shareButtonText" : "Share",
+    "saveButtonText" : "Add",
+    "directionButtonText" : "Directions",
+    "tab" : {
+      "details" : {
+        "text" : "Details",
+        "hourText" : "Hours",
+        "contactText" : "Contact",
+        "closedText" : "Closed on",
+        "signatureMenuText" : "Signature Menu",
+        "highlightMenuText" : "Menu Highlights"
+      },
+      "feeds" : {
+        "text" : "Review Video",
+        "direction" : {
+          "title" : "Open KakaoMap",
+          "desc" : "Directions will open in KakaoMap",
+          "cancelText" : "Cancel",
+          "openText" : "Open"
+        }
+      }
+    }
+  },
+  "gnb" : {
+    "home" : "Home",
+    "map" : "Map",
+    "collection" : "Collection",
+    "myGllo" : "My GIIO"
+  },
+  "loading" : {
+    "text" : "Try out the restaurants recommended by students"
+  },
+  "map" : {
+    "filter" : {
+      "korean" : "Korean",
+      "western" : "Western",
+      "japanese" : "Japanese",
+      "chinese" : "Chinese",
+      "vegan" : "Vegan",
+      "halal" : "Halal",
+      "withVideo" : "With video"
+    },
+    "search" : {
+      "inputHintText" : "Search places or menu",
+      "recentSearchText" : "Recent Searches"
+    },
+    "searchThisAreaText" : "Search this area"
+  }
+}
